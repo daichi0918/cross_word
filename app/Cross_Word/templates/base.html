@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+{% load static %}
+<html>
+    <head>
+        <meta charset='utf-8'>
+        <link rel="stylesheet" href="{% static 'css/style.css' %}">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>{% block title %}クロスワードアプリ{% endblock %}</title>
+    </head>
+    <body>
+        {% block content %}
+            <h1 class="title">IT クロスワード</h1>
+            {% comment %} <img class="crossword" rel="stylesheet" src= {% static 'images/crossword-sample1.png' %} /> {% endcomment %}
+        {% endblock %}
+
+    </body>
+</html>
