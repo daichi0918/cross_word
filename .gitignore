@@ -1,4 +1,6 @@
 ### DB ###
 db/*
-app/*/__pycache__/
+
+# .pycファイルを追加
+app/*/__pycache__/＊
 *.pyc
