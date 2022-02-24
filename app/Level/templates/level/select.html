@@ -1,0 +1,8 @@
+{% extends './base.html' %}
+
+{% block content %}
+    <p>難易度を選択して下さい</p>
+    <a href="{% url 'level:easy' %}">初級</a>
+    <a href="{% url 'level:nomal' %}">中級</a>
+    <a href="{% url 'level:hard' %}">上級</a>
+{% endblock content %}

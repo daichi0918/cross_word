@@ -1,2 +1,4 @@
 ### DB ###
 db/*
+app/*/__pycache__/
+*.pyc

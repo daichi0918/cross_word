@@ -26,7 +26,7 @@ SECRET_KEY = 'django-insecure-wch_vi4@v+fhaw_!uf$f)m%ra80s=lc4#_k)dk7%n61zg1hsbo
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = []
+ALLOWED_HOSTS = ['*']
 
 
 # Application definition
@@ -39,7 +39,8 @@ INSTALLED_APPS = [
     'django.contrib.messages',
     'django.contrib.staticfiles',
     'User',
-    'Level',
+    # 'level.apps.LevelConfig',
+    'level',
     'Cross_Word',
 ]
 
