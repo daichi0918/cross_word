@@ -3,11 +3,11 @@ version: '3'
 services:
   web:
     build: .
-    command: python3 manage.py runserver 0.0.0.0:8000
+    command: python3 manage.py runserver 0.0.0.0:8004
     volumes: 
       - './app:/usr/src/app'
     ports:
-      - "8000:8000"
+      - "8004:8004"
     depends_on:
       - db
     tty: true

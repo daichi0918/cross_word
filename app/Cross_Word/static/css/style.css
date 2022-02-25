@@ -1,0 +1,127 @@
+/* 画面上部のタイトル */
+.title {
+    text-align: center;
+}
+
+/* 画面上部レベル表示 */
+.level {
+    text-align: center;
+}
+
+/* 画面下部ヒント表示 */
+.hint {
+    list-style: none;
+    margin-left: 30%;
+    width:550px;
+    padding-bottom: 10px;
+    font-weight: bold;
+}
+
+/* 画面下部答え入力画面 */
+.ans-form {
+    margin-left: 40%;
+    display: block;
+    width: 330px;
+}
+
+/* 答え入力フォーム */
+.ans-box {
+    font-size: 150%;
+    width: 70%;
+    background-color: rgba(0, 170, 170, 0.2);
+    border-radius: 12px;
+}
+
+/* 決定ボタン */
+button {
+    margin-left: 20px;
+    background-color: rgba(0, 170, 170, 0.2);
+    border-radius:6px;
+
+}
+/* 背景 */
+.back-container {
+    background-color: rgba(0, 170, 170, 0.3);
+    height: 1000px;
+    border-radius: 12px;
+}
+
+/* クロスワードのボード、サイズ、範囲 */
+.container {
+    display: grid;
+    grid-template-columns: repeat(var(--items), min(calc(45vh/var(--items)), calc(45vw/var(--items))));
+    grid-template-rows: repeat(var(--items), min(calc(45vh/var(--items)), calc(45vw/var(--items))));
+    align-content: center;
+    justify-content: center;
+}
+
+/* ボードのブロック */
+.item {
+    width: 100%;
+    height: 100%;
+    box-sizing: border-box;
+    display: block;
+}
+
+/* 偶数ブロック */
+.item:nth-child(odd) {
+    background-color: rgb(230, 230, 230);
+}
+
+/* 奇数ブロック */
+.item:nth-child(even) {
+    background-color: rgb(240, 240, 240);
+}
+
+/* 偶数ブロック */
+.input-odd {
+    background-color: rgb(230, 230, 230);
+    border: rgb(230, 230, 230);
+    font-size: 300%;
+    max-width: 40%;
+    margin-left: 30%;
+}
+
+/* 奇数ブロック */
+.input-child {
+    background-color: rgb(240, 240, 240);
+    border: rgb(240, 240, 240);
+    font-size: 300%;
+    max-width: 40%;
+    margin-left: 30%;
+}
+
+/* 文字未入力ブロック */
+.input-none {
+    background-color: gray;
+    border: rgb(240, 240, 240);
+    font-size: 300%;
+    max-width: 40%;
+    margin-left: 30%;
+}
+
+/* クリック時のアウトライン設定 */
+:focus {
+    outline: none;
+}
+
+/* Pタグ */
+p {
+    margin: 0%;
+}
+
+/* 戻るボタン */
+a {
+    font-size: 150%;
+    background-color: rgba(0, 170, 170, 0.2);
+    color: rgb(40, 150, 150);
+    cursor: pointer;
+    border-radius: 6px;
+}
+
+/* カーソルを合わせたときに表示を変える */
+a:hover{
+	color: rgb(40, 150, 150);
+	font-size: 160%;
+	font-weight: bold;
+}
