@@ -20,5 +20,5 @@ urlpatterns = [
     path('admin/', admin.site.urls),
     path('User/', include('User.urls')),
     path('level/', include('level.urls')),
-    path('Cross_Word/', include('Cross_Word.urls')),
+    path('cross_word/', include('cross_word.urls')),
 ]
