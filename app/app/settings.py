@@ -42,7 +42,7 @@ INSTALLED_APPS = [
     'User',
     # 'level.apps.LevelConfig',
     'level',
-    'Cross_Word',
+    'cross_word',
 ]
 
 MIDDLEWARE = [
