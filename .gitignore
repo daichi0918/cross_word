@@ -4,3 +4,6 @@ db/*
 # .pycファイルを追加
 app/*/__pycache__/＊
 *.pyc
+
+# envファイル追加
+.env
