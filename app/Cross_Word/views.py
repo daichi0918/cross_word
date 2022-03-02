@@ -3,8 +3,8 @@ from django.shortcuts import render, redirect
 # クロスワード画面.
 def index(request):
     if request.method == "POST":
-        answer = 'OSS'
-        word = request.POST['word']
+        answer = 'oss'
+        word = request.POST['word'].lower()
         if answer == word:
             return redirect('cross_word:answer1')
     return render(request, 'cross_word/cross_word.html')
