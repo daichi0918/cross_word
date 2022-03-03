@@ -7,11 +7,11 @@
         <h2 class="level"> 初級 その壱 </h2>
         <div class="container" style="--items: 3">
             <div class="item">
-                <p>1</p>
+                <p>あ(1)</p>
                 <input class="input-odd" value="O"></input>
             </div>
             <div class="item">
-                <p>2</p>
+                <p>い(2)</p>
                 <input class="input-child" value="S"></input>
                 </div>
             <div class="item">
@@ -31,11 +31,11 @@
                 <input class="input-child" value=""></input>
                 </div>
             <div class="item">
-                <p>3</p>
+                <p>う</p>
                 <input class="input-odd" value="S"></input>
             </div>
             <div class="item">
-                <p>-</p>        
+                <p>(3)</p>        
                 <input class="input-child"value="S"></input>
                 </div>
             <div class="item">
@@ -43,13 +43,11 @@
                 <input class="input-odd"value="H"></input>
             </div>
         </div>
-        <ul>
-            <li class="hint">ヒント1:ネットワークアーキテクチャを構成する7階層のモデル</li>
-            <li class="hint">ヒント2:Web上で社会的ネットワークを構築可能にするサービス</li>
-            <li class="hint">ヒント3:暗号や認証の技術を利用して、安全にリモートコンピュータと通信するためのプロトコル</li>
-        </ul>
         <div class="ans-form">
-            <h1>正解</h1>
+            <h1>正解 : {{ ans }}</h1>
+            <div>
+            <p class="explanation">OSS(Open Source Software)は,ソフトウェアのソースコードが一般に公開され、商用および非商用の目的を問わずソースコードの利用・修正・再頒布が可能なソフトウェアと定義される。オープンソースライセンスが課せられたソフトウェアやパブリックドメインに置かれたソースコードとそのソフトウェアなどがそれに当たる。</p>
+            </div>
             <a href="{% url 'cross_word:index' %}">戻る</a>
         </div>
     </div>

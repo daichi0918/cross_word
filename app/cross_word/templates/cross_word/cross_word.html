@@ -5,37 +5,40 @@
     <div class="cross-word">
         {{ block.super }}
         <h2 class="level"> 初級 その壱 </h2>
+        <div>
+            <p class="explanation">以下のクロスワードを埋めて、数字の振ってあるマスの文字を順番に入力して回答しよう</p>
+        </div>
         <div class="container" style="--items: 3">
             <div class="item">
-                <p>1</p>
+                <p>あ(1)</p>
                 <input class="input-odd"></input>
             </div>
             <div class="item">
-                <p>2</p>
+                <p>い(2)</p>
                 <input class="input-child"></input>
                 </div>
             <div class="item">
                 <p>-</p>
                 <input class="input-odd"></input>
             </div>
-            <div class="item">
+            <div class="item-none">
                 <p>-</p>
-                <input class="input-child"></input>
+                <input class="input-none"></input>
                 </div>
             <div class="item">
                 <p>-</p>
                 <input class="input-odd"></input>
             </div>
-            <div class="item">
-                <p>-</p>
-                <input class="input-child"></input>
-                </div>
-            <div class="item">
-                <p>3</p>
-                <input class="input-odd"></input>
-            </div>
-            <div class="item">
+            <div class="item-none">
                 <p>-</p>        
+                <input class="input-none"></input>
+                </div>
+            <div class="item">
+                <p>う</p>
+                <input class="input-odd"></input>
+            </div>
+            <div class="item">
+                <p>(3)</p>        
                 <input class="input-child"></input>
                 </div>
             <div class="item">
@@ -43,15 +46,25 @@
                 <input class="input-odd"></input>
             </div>
         </div>
-        <ul>
-            <li class="hint">ヒント1:ネットワークアーキテクチャを構成する7階層のモデル</li>
-            <li class="hint">ヒント2:Web上で社会的ネットワークを構築可能にするサービス</li>
-            <li class="hint">ヒント3:暗号や認証の技術を利用して、安全にリモートコンピュータと通信するためのプロトコル</li>
-        </ul>
+        <div class="warpper">
+            <div class="box1">
+                <ul>
+                    <li class="hint">横のヒント</li>
+                    <li class="hint">あ :ネットワークアーキテクチャを構成する7階層のモデル</li>
+                    <li class="hint">い :暗号や認証の技術を利用して、安全にリモートコンピュータと通信するためのプロトコル</li>
+                </ul>
+            </div>
+            <div class="box2">
+                <ul>
+                    <li class="hint">縦のヒント</li>
+                    <li class="hint">う :Web上で社会的ネットワークを構築可能にするサービス</li>
+                </ul>
+            </div>
+        </div>
         <div class="ans-form">
             <form method="POST">
                 {% csrf_token %}
-                <input class="ans-box" type="value" id='word' name="word"/>
+                <input class="ans-box" type="value" id='word' name="word"/> 
                 <button type="submit">決定</button>
             </form>
         </div>
