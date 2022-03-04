@@ -7,40 +7,58 @@
         <h2 class="level"> 初級 その壱 </h2>
         <div class="container" style="--items: 3">
             <div class="item">
-                <p>あ(1)</p>
-                <input class="input-odd" value="O"></input>
+                <p>A(1)</p>
+                <input class="input-odd" value="O" maxlength="1" readonly></input>
             </div>
             <div class="item">
-                <p>い(2)</p>
-                <input class="input-child" value="S"></input>
+                <p>I(2)</p>
+                <input class="input-child" value="S" maxlength="1" readonly></input>
                 </div>
             <div class="item">
                 <p>-</p>
-                <input class="input-odd" value="I"></input>
+                <input class="input-odd" value="I" maxlength="1" readonly></input>
             </div>
-            <div class="item">
+            <div class="item-none">
                 <p>-</p>
-                <input class="input-child" value=""></input>
+                <input class="input-none" value="" maxlength="1" readonly></input>
                 </div>
             <div class="item">
                 <p>-</p>
-                <input class="input-odd" value="N"></input>
+                <input class="input-odd" value="N" maxlength="1" readonly></input>
             </div>
-            <div class="item">
+            <div class="item-none">
                 <p>-</p>        
-                <input class="input-child" value=""></input>
+                <input class="input-none" value="" maxlength="1" readonly></input>
                 </div>
             <div class="item">
-                <p>う</p>
-                <input class="input-odd" value="S"></input>
+                <p>U</p>
+                <input class="input-odd" value="S" maxlength="1" readonly></input>
             </div>
             <div class="item">
                 <p>(3)</p>        
-                <input class="input-child"value="S"></input>
+                <input class="input-child"value="S" maxlength="1" readonly></input>
                 </div>
             <div class="item">
                 <p>-</p>
-                <input class="input-odd"value="H"></input>
+                <input class="input-odd"value="H" maxlength="1" readonly></input>
+            </div>
+        </div>
+        <div class="warpper">
+            <div class="box1">
+                <ul>
+                    <li class="hint">横のヒント</li>
+                    {% for item in horizonal %}
+                    <li class="hint">{{ item.hint }}</li>
+                    {% endfor %}
+                </ul>
+            </div>
+            <div class="box2">
+                <ul>
+                    <li class="hint">縦のヒント</li>
+                    {% for item in vertical %}
+                    <li class="hint">{{ item.hint }}</li>
+                    {% endfor %}
+                </ul>
             </div>
         </div>
         <div class="ans-form">
