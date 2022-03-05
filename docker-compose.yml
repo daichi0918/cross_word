@@ -18,7 +18,7 @@ services:
       MYSQL_PASSWORD: password
       MYSQL_HOST: db
   db:
-    image: mysql:5.7
+    build: ./mysql
     volumes: 
       - ./db:/var/lib/mysql
     environment: 
@@ -29,20 +29,20 @@ services:
     ports:
       - "3306:3306"
 
-  phpmyadmin:
-    image: phpmyadmin/phpmyadmin
-    # env_file:
-    #   - .env.dev
-    links:
-      - db
-    ports:
-      - "4000:80"
-    volumes:
-      - ./phpmyadmin/sessions:/sessions
-    # networks:
-    #   - fastapi_network
-    environment:
-      PMA_ARBITRARY: 1
-      PMA_HOST: db
-      PMA_USER: root
-      PMA_PASSWORD: password
+  # phpmyadmin:
+  #   image: phpmyadmin/phpmyadmin
+  #   # env_file:
+  #   #   - .env.dev
+  #   links:
+  #     - db
+  #   ports:
+  #     - "4000:80"
+  #   volumes:
+  #     - ./phpmyadmin/sessions:/sessions
+  #   # networks:
+  #   #   - fastapi_network
+  #   environment:
+  #     PMA_ARBITRARY: 1
+  #     PMA_HOST: db
+  #     PMA_USER: root
+  #     PMA_PASSWORD: password
