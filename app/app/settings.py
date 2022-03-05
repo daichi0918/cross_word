@@ -87,6 +87,9 @@ DATABASES = {
         'PASSWORD': getenv('MYSQL_PASSWORD'),
         'HOST': getenv('MYSQL_HOST'),
         'PORT': 3306,
+        'OPTIONS': {
+            'charset': 'utf8mb4',
+        },        
     }
 }
 
