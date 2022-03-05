@@ -10,61 +10,64 @@
         </div>
         <div class="container" style="--items: 3">
             <div class="item">
-                <p>あ(1)</p>
-                <input class="input-odd"></input>
+                <p>A(1)</p>
+                <input class="input-odd" maxlength="1"></input>
             </div>
             <div class="item">
-                <p>い(2)</p>
-                <input class="input-child"></input>
+                <p>I(2)</p>
+                <input class="input-child" maxlength="1"></input>
                 </div>
             <div class="item">
                 <p>-</p>
-                <input class="input-odd"></input>
+                <input class="input-odd" maxlength="1"></input>
             </div>
             <div class="item-none">
                 <p>-</p>
-                <input class="input-none"></input>
+                <input class="input-none" maxlength="1"></input>
                 </div>
             <div class="item">
                 <p>-</p>
-                <input class="input-odd"></input>
+                <input class="input-odd" maxlength="1"></input>
             </div>
             <div class="item-none">
                 <p>-</p>        
-                <input class="input-none"></input>
+                <input class="input-none" maxlength="1"></input>
                 </div>
             <div class="item">
-                <p>う</p>
-                <input class="input-odd"></input>
+                <p>U</p>
+                <input class="input-odd" maxlength="1"></input>
             </div>
             <div class="item">
                 <p>(3)</p>        
-                <input class="input-child"></input>
+                <input class="input-child" maxlength="1"></input>
                 </div>
             <div class="item">
                 <p>-</p>
-                <input class="input-odd"></input>
+                <input class="input-odd" maxlength="1"></input>
             </div>
         </div>
         <div class="warpper">
             <div class="box1">
                 <ul>
                     <li class="hint">横のヒント</li>
-                    <li class="hint">あ :ネットワークアーキテクチャを構成する7階層のモデル</li>
-                    <li class="hint">い :暗号や認証の技術を利用して、安全にリモートコンピュータと通信するためのプロトコル</li>
+                    {% for item in horizonal %}
+                    <li class="hint">{{ item.hint }}</li>
+                    {% endfor %}
                 </ul>
             </div>
             <div class="box2">
                 <ul>
                     <li class="hint">縦のヒント</li>
-                    <li class="hint">う :Web上で社会的ネットワークを構築可能にするサービス</li>
+                    {% for item in vertical %}
+                    <li class="hint">{{ item.hint }}</li>
+                    {% endfor %}
                 </ul>
             </div>
         </div>
         <div class="ans-form">
             <form method="POST">
                 {% csrf_token %}
-                <input class="ans-box" type="value" id='word' name="word"/> 
+                <input class="ans-box" type="value" id='word' name="word" maxlength="3"/> 
                 <button type="submit">決定</button>
             </form>
         </div>
