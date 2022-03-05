@@ -1,5 +1,6 @@
 Django==3.2
 mysqlclient
+django-mysql
 asgiref==3.4.1
 docutils==0.14
 lockfile==0.11.0
