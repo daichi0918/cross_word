@@ -43,6 +43,7 @@ INSTALLED_APPS = [
     # 'level.apps.LevelConfig',
     'level',
     'cross_word',
+    'django_mysql',
 ]
 
 MIDDLEWARE = [
