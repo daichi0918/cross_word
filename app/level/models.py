@@ -1,16 +1,18 @@
 from django.db import models
-from django_mysql.models import JSONField, Model
+
 # Create your models here.
 
 
-class QuestionAll(Model):
+
+class QuestionAll(models.Model):
 
     question_id = models.IntegerField()
     # 望月さんが作られた問題集のIDをここで取ってくる
     # gaibu_key = models.ForeignKey()
 
 
-class Friend(Model):
+
+class Friend(models.Model):
     name = models.CharField(max_length=100)
     mail = models.EmailField(max_length=200)
     gender = models.BooleanField()
@@ -19,4 +21,4 @@ class Friend(Model):
      
     def __str__(self):
         return '<Friend:id=' + str(self.id) + ', ' + \
-            self.name + '(' + str(self.age) + ')>'
+
