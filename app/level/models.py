@@ -1,6 +1,9 @@
 from django.db import models
 
 # Create your models here.
+
+
+
 class QuestionAll(models.Model):
 
     question_id = models.IntegerField()
