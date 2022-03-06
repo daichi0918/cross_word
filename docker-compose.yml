@@ -24,8 +24,6 @@ services:
     environment: 
       MYSQL_DATABASE: django_development
       MYSQL_ROOT_PASSWORD: password
-    env_file:
-      - ./.env
     ports:
       - "3306:3306"
 
