@@ -43,7 +43,6 @@ INSTALLED_APPS = [
     # 'level.apps.LevelConfig',
     'level',
     'cross_word',
-    'django_mysql',
 ]
 
 MIDDLEWARE = [
@@ -88,9 +87,6 @@ DATABASES = {
         'PASSWORD': getenv('MYSQL_PASSWORD'),
         'HOST': getenv('MYSQL_HOST'),
         'PORT': 3306,
-        'OPTIONS': {
-            'charset': 'utf8mb4',
-        },        
     }
 }
 
