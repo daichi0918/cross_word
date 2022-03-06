@@ -18,32 +18,12 @@ services:
       MYSQL_PASSWORD: password
       MYSQL_HOST: db
   db:
-    build: ./mysql
+    image: mysql:5.7
     volumes: 
       - ./db:/var/lib/mysql
     environment: 
       MYSQL_DATABASE: django_development
       MYSQL_ROOT_PASSWORD: password
-    env_file:
-      - ./.env
     ports:
       - "3306:3306"
-
-  # phpmyadmin:
-  #   image: phpmyadmin/phpmyadmin
-  #   # env_file:
-  #   #   - .env.dev
-  #   links:
-  #     - db
-  #   ports:
-  #     - "4000:80"
-  #   volumes:
-  #     - ./phpmyadmin/sessions:/sessions
-  #   # networks:
-  #   #   - fastapi_network
-  #   environment:
-  #     PMA_ARBITRARY: 1
-  #     PMA_HOST: db
-  #     PMA_USER: root
-  #     PMA_PASSWORD: password
 

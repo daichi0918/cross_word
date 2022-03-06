@@ -21,4 +21,3 @@ class Friend(models.Model):
     
     def __str__(self):
         return '<Friend:id=' + str(self.id) + ', '
-
