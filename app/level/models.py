@@ -3,7 +3,6 @@ from django.db import models
 # Create your models here.
 
 
-
 class QuestionAll(models.Model):
 
     question_id = models.IntegerField()
@@ -19,6 +18,6 @@ class Friend(models.Model):
     age = models.IntegerField(default=0)
     birthday = models.DateField()
      
-    # def __str__(self):
-    #     return '<Friend:id=' + str(self.id) + ', ' + \
+
+
 
