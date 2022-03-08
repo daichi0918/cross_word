@@ -3,7 +3,7 @@ from django.db import models
 # Create your models here.
 class VerticalHint(models.Model):
     
-    crossword_id = models.IntegerField(default=1)
+    crossword_id = models.IntegerField(default=0)
     hint = models.CharField(max_length=500)
 
     def __str__(self):
@@ -12,7 +12,7 @@ class VerticalHint(models.Model):
 
 class HorizonalHint(models.Model):
     
-    crossword_id = models.IntegerField(default=1)
+    crossword_id = models.IntegerField(default=-1)
     hint = models.CharField(max_length=500)
 
     def __str__(self):
