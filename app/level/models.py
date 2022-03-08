@@ -18,7 +18,6 @@ class Friend(models.Model):
     gender = models.BooleanField()
     age = models.IntegerField(default=0)
     birthday = models.DateField()
-     
-    # def __str__(self):
-    #     return '<Friend:id=' + str(self.id) + ', ' + \
-
+    
+    def __str__(self):
+        return '<Friend:id=' + str(self.id) + ', '
