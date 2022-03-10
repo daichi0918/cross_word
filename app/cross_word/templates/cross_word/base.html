@@ -9,8 +9,20 @@
     </head>
     <body>
         {% block content %}
+            <header>
+                <div class="d-flex">
+                    <div class="p-2">
+                        <a class="header-content" href="#">アカウント</a>
+                    </div>
+                    <div class="p-2">
+                        <a class="header-content" href="{% url 'level:select' %}">クロスワード</a>
+                    </div>
+                    <div class="p-2">
+                        <a class="header-content" href="#">Home</a>
+                    </div>        
+                </div>
+            </header>
             <h1 class="title">IT クロスワード</h1>
         {% endblock %}
-
     </body>
 </html>
