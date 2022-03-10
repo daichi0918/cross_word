@@ -7,6 +7,7 @@ from django.contrib.auth.decorators import login_required
 from django.utils.decorators import method_decorator
 from django.contrib.auth.mixins import LoginRequiredMixin
 from django.contrib.auth.views import LoginView, LogoutView
+from django.urls import reverse_lazy
 
 
 class HomeView(TemplateView):
@@ -15,6 +16,7 @@ class HomeView(TemplateView):
 class RegistUserView(CreateView):
     template_name = 'user/regist.html'
     form_class = RegistForm
+    success_url = reverse_lazy('user:home')
 
 
 class UserLoginView(LoginView):

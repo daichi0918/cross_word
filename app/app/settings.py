@@ -42,7 +42,7 @@ INSTALLED_APPS = [
     'user',
     # 'level.apps.LevelConfig',
     'level',
-    'cross_word',
+    'cross_word'
 ]
 
 AUTH_USER_MODEL = 'user.Users'
@@ -130,6 +130,7 @@ USE_TZ = True
 # https://docs.djangoproject.com/en/3.2/howto/static-files/
 
 STATIC_URL = '/static/'
+
 
 # Default primary key field type
 # https://docs.djangoproject.com/en/3.2/ref/settings/#default-auto-field

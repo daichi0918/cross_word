@@ -1,9 +1,20 @@
-{% extends './base.html' %}
+<!DOCTYPE html>
+{% load static %}
+<html lang="ja">
+   <head>
+      <meta charset="utf-8">
+      <link rel="stylesheet" href="{% static 'user/style.css' %}">
+   </head>
+   <body>
+
 {% block content %}
-<form method="POST">
-   {% csrf_token %}
-   {{ form.as_p }}
-   <input type="hidden" name="next" value="{{ request.GET.next }}">
-   <input type="submit" value="ログイン">
-</form>
+  <form method="POST">  
+    <h1><span>IT</span> Cross_word</h1>
+    {% csrf_token %}
+    {{ form.as_p }}
+    <input type="hidden" name="next" value="{{ request.GET.next }}">
+    <input class="btn" type="submit" value="ログイン">
+    <a class="regist" href="{% url 'user:regist' %}">新規登録はこちらから</a>
+  </form>
+    
 {% endblock %}
