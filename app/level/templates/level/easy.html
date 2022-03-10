@@ -1,13 +1,14 @@
 {% extends './base.html' %}
 {% block content %}
 
-<!-- cross_wordページにURLで遷移するためのもの -->
-<a href="{% url 'cross_word:answer1.html' %}">問題1</a>
+<!-- cross_wordページに直接URLで遷移するためのもの -->
+<a href="http://localhost:8004/cross_word/">問題1</a>
 
-{% for question in question_list %}
-    <div>
-        <p>{question.title}</p>
-      <!-- <p>{{ test }}:{{ test.title }}:{{ test.memo}}</p> -->
-    </div>
-{% endfor %}
+<!-- データーベースから取り出したい！ -->
+ <!-- {% for question in question_list %} -->
+    <!-- <div> -->
+        <!-- <p>{question.title}</p> -->
+        <!-- <p>{{ test }}:{{ test.title }}:{{ test.memo}}</p> -->
+    <!-- </div> -->
+<!-- {% endfor %}  -->
 {% endblock %}

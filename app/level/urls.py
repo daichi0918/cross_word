@@ -10,4 +10,5 @@ urlpatterns = [
     path('easy/', views.easy, name='easy'),
     path('nomal/', views.nomal, name='nomal'),
     path('hard/', views.hard, name='hard'),
+    # path('cross_word', views.cross_word, name='cross_word'),
 ]

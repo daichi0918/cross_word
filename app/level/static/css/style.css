@@ -1,6 +1,6 @@
 /* ヘッダー部分の作成 */
 .d-flex {
-    background-color: rgba(0, 170, 170, 0.3);
+    background-color: rgba(0, 170, 170, 0.2);
     height:70px;
 }
 
@@ -13,11 +13,18 @@
     font-weight: bold;
 }
 
-.header-content {
+/* .header-content {
     color: rgba(40, 150, 150);
+} */
+
+/* 選択ボタンを縦表示 */
+.btn-wrapper {
+    display: block;
+    margin-top:50px;
 }
 
 /* 背景 */
-.back-container {
+body {
     background-color:rgba(0, 170, 170, 0.3);
+    height:100%;
 }
