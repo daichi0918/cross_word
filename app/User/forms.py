@@ -3,6 +3,7 @@ from .models import Users
 from django.contrib.auth.password_validation import validate_password
 from django.contrib.auth.forms import AuthenticationForm
 
+# ユーザー新規登録
 class RegistForm(forms.ModelForm):
     username = forms.CharField(label='名前')
     email = forms.EmailField(label='メールアドレス')
@@ -20,9 +21,7 @@ class RegistForm(forms.ModelForm):
         return user
 
 
-# class UserLoginForm(forms.Form):
-#     email = forms.EmailField(label='メールアドレス')
-#     password = forms.CharField(label='パスワード', widget=forms.PasswordInput())
+#ログインフォーム
 class UserLoginForm(AuthenticationForm):
     username = forms.EmailField(label='', 
     widget=forms.TextInput(attrs={'placeholder': 'username'}))
