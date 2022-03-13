@@ -15,24 +15,26 @@
   </head>
   <body>
     <div class="back-container">
-      {% block header %}
-      <header>
-        <div class="d-flex flex-row-reverse">
-          <div class="p-2">
-            <a class="header-content" href="#">ログアウト</a>
+      <!-- <div class="container"> -->
+        {% block header %}
+        <header>
+          <div class="d-flex flex-row-reverse">
+            <div class="p-2">
+              <a class="header-content" href="#">ログアウト</a>
+            </div>
+            <div class="p-2">
+              <a class="header-content" href="{% url 'level:select' %}">Home</a>
+            </div>
+            <!-- <div class="p-2">
+              <a href="#">Home</a>
+            </div>         -->
           </div>
-          <div class="p-2">
-            <a class="header-content" href="{% url 'level:select' %}">Home</a>
-          </div>
-          <!-- <div class="p-2">
-            <a href="#">Home</a>
-          </div>         -->
-        </div>
-      </header>
-      {% endblock header %}
-            
-      {% block content %}
-      {% endblock content %}
+        </header>
+        {% endblock header %}
+              
+        {% block content %}
+        {% endblock content %}
+      <!-- </div> -->
     </div>
   </body>
 </html>

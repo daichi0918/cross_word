@@ -1,58 +1,34 @@
+<!--  -->
 {% extends './base.html' %}
 {% load static %}
-{% block content %}
 <div class="back-container">
-    <!-- center寄せ難易度選択画面 -->
-    <!-- <div class="card text-center mx-auto" style="width: 600px;">
-        <div class="card-header">
-            難易度を選択してください
-        </div>
-        <div class="card-body">
+{% block content %}
+    <div class="select text-center">
+        <h4>難易度を選択してください</h4>
+        <button type="button" onclick="location.href='{% url 'level:easy' %}'" class="btn mx-auto btn-wrapper btn-success">
+            初級
+        </button>
+        <button type="button" onclick="location.href='{% url 'level:nomal' %}'" class="btn mx-auto btn-wrapper btn-success">
+            中級
+        </button>
+        <button type="button" onclick="location.href='{% url 'level:hard' %}'" class="btn mx-auto btn-wrapper btn-success">
+            上級
+        </button>
+        <!-- <button type="button" class="btn mx-auto btn-success btn-wrapper">
             <a href="{% url 'level:easy' %}">
-                <button type="button" class="btn btn-outline-info">
-                    初級
-                </button>
+                初級
             </a>
-        </div>
-        <div class="card-body">
+        </button>
+        <button type="button" class="btn mx-auto btn-success btn-wrapper">
             <a href="{% url 'level:nomal' %}">
-                <button type="button" class="btn btn-outline-info">
-                    中級
-                </button>
+                中級
             </a>
-        </div>
-        <div class="card-body">
+        </button>
+        <button type="button" class="btn mx-auto btn-success btn-wrapper">
             <a href="{% url 'level:hard' %}">
-                <button type="button" class="btn btn-outline-info">
-                    上級
-                </button>
+                上級
             </a>
-        </div> -->
-        <!-- cardなし -->
-        <div class="select text-center">
-            <h4>難易度を選択してください</h4>
-            <a href="{% url 'level:easy' %}">
-                <button type="button" class="btn mx-auto btn-wrapper .btn-primary">
-                    <h6>
-                        初級
-                    </h6>
-                </button>
-            </a>
-            <a href="{% url 'level:nomal' %}">
-                <button type="button" class="btn mx-auto btn-wrapper .btn-primary">
-                    <h6>
-                        中級
-                    </h6>
-                </button>
-            </a>
-            <a href="{% url 'level:hard' %}">
-                <button type="button" class="btn mx-auto btn-wrapper .btn-primary">
-                    <h6>
-                        上級
-                    </h6>
-                </button>
-            </a>
-        </div>
+        </button> -->
     </div>
+    {% endblock content %}
 </div>
-{% endblock content %}

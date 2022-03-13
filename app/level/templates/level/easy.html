@@ -2,13 +2,18 @@
 {% block content %}
 
 <!-- cross_wordページに直接URLで遷移するためのもの -->
-<a href="http://localhost:8004/cross_word/">問題1</a>
+<!-- <a href="http://localhost:8004/cross_word/">
+  <button type="button" class="btn mx-auto btn-wrapper btn-success">
+    問題1
+  </button> 
+</a> -->
 
 <!-- データーベースから取り出したい！ -->
- <!-- {% for question in question_list %} -->
-    <!-- <div> -->
-        <!-- <p>{question.title}</p> -->
-        <!-- <p>{{ test }}:{{ test.title }}:{{ test.memo}}</p> -->
-    <!-- </div> -->
-<!-- {% endfor %}  -->
+ {% for question in question_list %}
+    <div>
+        <p>{question.title}</p>
+        <!-- <p>{{ test }}:{{ .title }}:{{ test.memo}}</p> -->
+    </div>
+ {% endfor %} 
+ <p>テスト</p>
 {% endblock %}

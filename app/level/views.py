@@ -24,16 +24,8 @@ def hard(request):
     # return render(request, 'hard.html')
     return render(request, 'level/hard.html')
 
-# def select_easy(request):
-#     return render(request, 'cross_word/cross_word.html')
-
-# def users(request):
-#     user_list = User.objects.all() # 値一覧を取得
-#     user_dict = {'users': user_list} # ディクショナリーの形で設定
-
-#     return render(request, 'app/users.html', context=user_dict) # context=user_dictとして、users.htmlに渡す
-
-# def list(request):
-#     question_list = QuestionAll.objects.all()
-#     # list_dict = {'question': list1}
-#     return render(request, 'level/easy.html', {'question':question_list})
+def list(request):
+    question_list = QuestionAll.objects.all().values()
+    # list_dict = {'question': list1}
+    # return render(request, 'level/easy.html', {'question':question_list})
+    return render(request, 'level/easy.html', {'question':question_list})
