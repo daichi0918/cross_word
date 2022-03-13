@@ -1,8 +1,7 @@
 from urllib import request
 from django.shortcuts import render
 from django.http import HttpResponse
-from level.models import QuestionAll
-# from app.models import User # モデルをインポート
+from .models import QuestionAll, Friend
 
 # Create your views here.
 def index(request):
@@ -14,18 +13,28 @@ def select(request):
 
 def easy(request):
     # return render(request, 'easy.html')
-    return render(request, 'level/easy.html')
+    params = {
+        'friend': [],
+    }
+    params['friend']=Friend.objects.all()
+    questionModel = {'question': QuestionAll.objects.all()}
+    return render(request, 'level/easy.html', params)
 
-def nomal(request):
+def normal(request):
     # return render(request, 'nomal.html')
-    return render(request, 'level/nomal.html')
+    return render(request, 'level/normal.html')
 
 def hard(request):
     # return render(request, 'hard.html')
     return render(request, 'level/hard.html')
 
-def list(request):
-    question_list = QuestionAll.objects.all().values()
-    # list_dict = {'question': list1}
-    # return render(request, 'level/easy.html', {'question':question_list})
-    return render(request, 'level/easy.html', {'question':question_list})
+# def list(request):
+#     # question_list = QuestionAll.objects.all()
+
+#     params = {
+#         'friend': [],
+#     }
+#     params['friend']=Friend.objects.all()
+#     questionModel = {'question': QuestionAll.objects.all()}
+#     return render(request, 'level/easy.html', params)
+

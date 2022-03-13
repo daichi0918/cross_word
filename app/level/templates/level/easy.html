@@ -9,11 +9,16 @@
 </a> -->
 
 <!-- データーベースから取り出したい！ -->
- {% for question in question_list %}
-    <div>
-        <p>{question.title}</p>
-        <!-- <p>{{ test }}:{{ .title }}:{{ test.memo}}</p> -->
-    </div>
- {% endfor %} 
- <p>テスト</p>
-{% endblock %}
+<table class="table" style="border-collapse: collapse">
+  <tr>
+      <th>問題一覧</th>
+  </tr>
+  {% for item in friend %}
+  <tr>
+      <td>{{item.name}}</td>
+      <!-- <td>{{item.age}}</td> -->
+      <!-- <td><input type="button" class="btn mx-auto btn-wrapper btn-success">{{item.age}}</td> -->
+  <tr>
+{% endfor %}
+</table>
+{% endblock content %}
