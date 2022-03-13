@@ -98,6 +98,7 @@ button {
     height: 100%;
     box-sizing: border-box;
     display: block;
+    list-style: none;
 }
 
 .item-none {
