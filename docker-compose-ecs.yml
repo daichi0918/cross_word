@@ -2,7 +2,7 @@ version: '3'
 
 services:
   web:
-    image: 
+    image: XXXXXXXXXXXX.dkr.ecr.ap-northeast-1.amazonaws.com/django-ecs-sample-web:latest
     command: python3 manage.py runserver 0.0.0.0:8004
     volumes: 
       - './app:/usr/src/app'
@@ -18,7 +18,7 @@ services:
       MYSQL_PASSWORD: password
       MYSQL_HOST: db
   db:
-    build: ./mysql
+    image: XXXXXXXXXXXX.dkr.ecr.ap-northeast-1.amazonaws.com/django-ecs-sample-mysql:latest
     volumes: 
       - ./db:/var/lib/mysql
     environment: 
