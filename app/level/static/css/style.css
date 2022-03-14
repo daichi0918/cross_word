@@ -7,7 +7,7 @@ header {
 }
 
 .d-flex {
-    background-color: rgba(0, 170, 170, 0.2);
+    background-color: rgba(0, 170, 170, 0.3);
     height:70px;
 }
 
@@ -28,6 +28,9 @@ header {
 .btn-wrapper {
     display: block;
     margin-top:50px;
+    width: 300px;
+    border: 5px;
+    background-color: rgba(40, 150, 150);
 }
 
 /* 背景を全体に */
@@ -46,5 +49,10 @@ html, body {
 }
 
 .btn-width {
-    margin-right: 40%;
+    font-size: 20px;
+}
+
+/* 問題一覧を横並びにする */
+.dinline {
+    display: inline-block;
 }

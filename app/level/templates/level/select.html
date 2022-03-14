@@ -1,17 +1,16 @@
-<!--  -->
 {% extends './base.html' %}
 {% load static %}
 <div class="back-container">
 {% block content %}
     <div class="select text-center">
         <h4>難易度を選択してください</h4>
-        <button type="button" onclick="location.href='{% url 'level:easy' %}'" class="btn mx-auto btn-wrapper btn-success">
+        <button type="button" onclick="location.href='{% url 'level:easy' %}'" class="btn-width mx-auto btn-wrapper">
             初級
         </button>
-        <button type="button" onclick="location.href='{% url 'level:nomal' %}'" class="btn mx-auto btn-wrapper btn-success">
+        <button type="button" onclick="location.href='{% url 'level:nomal' %}'" class="btn-width mx-auto btn-wrapper">
             中級
         </button>
-        <button type="button" onclick="location.href='{% url 'level:hard' %}'" class="btn mx-auto btn-wrapper btn-success">
+        <button type="button" onclick="location.href='{% url 'level:hard' %}'" class="btn-width mx-auto btn-wrapper">
             上級
         </button>
         <!-- <button type="button" class="btn mx-auto btn-success btn-wrapper">

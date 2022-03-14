@@ -9,15 +9,18 @@
 </a> -->
 
 <!-- データーベースから取り出したい！ -->
-<table class="table" style="border-collapse: collapse">
+<table class="table dinline" style="border-collapse: collapse">
   <tr>
       <th>問題一覧</th>
   </tr>
   {% for item in friend %}
   <tr>
-      <td>{{item.name}}</td>
-      <!-- <td>{{item.age}}</td> -->
-      <td><button class="btn mx-auto btn-wrapper btn-width btn-success">{{item.age}}</button></td>
+    <td>
+      {{item.name}}
+    </td>
+    <td>
+      <button class="btn-width mx-auto btn-wrapper">問題:{{item.age}}</button>
+    </td>
   <tr>
 {% endfor %}
 </table>
