@@ -20,9 +20,9 @@ def easy(request):
     questionModel = {'question': QuestionAll.objects.all()}
     return render(request, 'level/easy.html', params)
 
-def normal(request):
+def nomal(request):
     # return render(request, 'nomal.html')
-    return render(request, 'level/normal.html')
+    return render(request, 'level/nomal.html')
 
 def hard(request):
     # return render(request, 'hard.html')

@@ -1,6 +1,13 @@
 /* ヘッダー部分の作成 */
+header {
+    position: fixed;
+    margin-top: 0;
+    margin-right: 20px;
+    width: 100%;
+}
+
 .d-flex {
-    background-color: rgba(0, 170, 170, 0.3);
+    background-color: rgba(0, 170, 170, 0.2);
     height:70px;
 }
 
@@ -23,16 +30,21 @@
     margin-top:50px;
 }
 
-/* 背景 */
+/* 背景を全体に */
 html, body {
     height:100%;
     margin: 0;
     padding: 0;
 }
 
+/* 背景の色指定 */
 .back-container {
-    background-color: rgba(0, 170, 170, 0.2);
+    background-color: rgba(0, 170, 170, 0.3);
     height: 100%;
     border-radius: 12px;
     margin-top: 0;
+}
+
+.btn-width {
+    margin-right: 40%;
 }

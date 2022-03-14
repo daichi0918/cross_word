@@ -8,6 +8,6 @@ urlpatterns = [
     # path('base/', views.base, name='base'),
     path('select/', views.select, name='select'),
     path('easy/', views.easy, name='easy'),
-    path('normal/', views.normal, name='normal'),
+    path('nomal/', views.nomal, name='nomal'),
     path('hard/', views.hard, name='hard'),
 ]
