@@ -33,3 +33,5 @@ class Cross_wordSomething(models.Model):
         crossword_id = str(self.crossword_id)
         return "Cross_wordSomething_" + crossword_id
 
+
+

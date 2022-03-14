@@ -74,11 +74,13 @@
             </div>
         </div>
         <div class="ans-form">
-            <h1>答え : {{ ans }}</h1>
+            {% for some in something %}
+            <h1>答え : {{ some.crossword_ans }}</h1>
             <div>
-            <p class="explanation">{{ comment }}</p>
+            <p class="explanation">{{ some.crossword_ans_comment }}</p>
             </div>
             <a class= "ans-button" href="{% url 'cross_word:index' %}">戻る</a>
+            {% endfor %}
         </div>
     </div>
 </div>

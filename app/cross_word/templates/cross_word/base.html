@@ -19,11 +19,13 @@
                     </div>
                     <div class="p-2">
                         <a class="header-content" href="#">Home</a>
-                    </div>        
+                    </div>  
                 </div>
             </header>
             <h1 class="title">IT クロスワード</h1>
         {% endblock %}
+        {% for some in something %}
         <script type="text/javascript" src="{% static 'js/easy/answer1.js' %}"></script>
+        {% endfor %}
     </body>
 </html>
