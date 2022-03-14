@@ -4,45 +4,54 @@
 <div class="back-container">
     <div class="cross-word">
         {{ block.super }}
-        <h2 class="level"> 初級 その壱 </h2>
+        <h2 id="level" class="level"></h2>
         <div>
             <p class="explanation">以下のクロスワードを埋めて、数字の振ってあるマスの文字を順番に入力して回答しよう</p>
         </div>
         <div class="container" style="--items: 3">
             <div class="item">
-                <p class="hint-header">A<span>(1)</span></p>
+                <li id="one" class="hint-header"></li>
+                <li id="one-s" class="hint-header-s"></li>
                 <input class="input-odd" maxlength="1"></input>
             </div>
             <div class="item">
-                <p class="hint-header">I<span>(2)</span></p>
+                <li id="two" class="hint-header"></li>
+                <li id="two-s" class="hint-header-s"></li>
                 <input class="input-child" maxlength="1"></input>
                 </div>
             <div class="item">
-                <p class="hint-header">-<span>()</span></p>
+                <li id="three" class="hint-header"></li>
+                <li id="three-s" class="hint-header-s"></li>
                 <input class="input-odd" maxlength="1"></input>
             </div>
             <div class="item-none">
-                <p class="hint-header">-<span>()</span></p>
+                <li id="four" class="hint-header"></li>
+                <li id="four-s" class="hint-header-s"></li>
                 <input class="input-none" maxlength="1"></input>
                 </div>
             <div class="item">
-                <p class="hint-header">-<span>()</span></p>
+                <li id="five" class="hint-header"></li>
+                <li id="five-s" class="hint-header-s"></li>
                 <input class="input-odd" maxlength="1"></input>
             </div>
             <div class="item-none">
-                <p class="hint-header">-<span>()</span></p>        
+                <li id="six" class="hint-header"></li>
+                <li id="six-s" class="hint-header-s"></li>
                 <input class="input-none" maxlength="1"></input>
                 </div>
             <div class="item">
-                <p class="hint-header">U<span>()</span></p>
+                <li id="seven" class="hint-header"></li>
+                <li id="seven-s" class="hint-header-s"></li>
                 <input class="input-odd" maxlength="1"></input>
             </div>
             <div class="item">
-                <p class="hint-header">-<span>(3)</span></p>        
+                <li id="eight" class="hint-header"></li>
+                <li id="eight-s" class="hint-header-s"></li>
                 <input class="input-child" maxlength="1"></input>
                 </div>
             <div class="item">
-                <p class="hint-header">-<span>()</span></p>
+                <li id="nine" class="hint-header"></li>
+                <li id="nine-s" class="hint-header-s"></li>
                 <input class="input-odd" maxlength="1"></input>
             </div>
         </div>

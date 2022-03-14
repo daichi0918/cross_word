@@ -4,43 +4,55 @@
 <div class="back-container">
     <div class="cross-word">
         {{ block.super }}
-        <h2 class="level"> 初級 その壱 </h2>
+        <h2 id="level" class="level"></h2>
+        <div>
+            <h1 class="explanation">-----  正解！！　-----</h1>
+        </div>
         <div class="container" style="--items: 3">
             <div class="item">
-                <p class="hint-header">A<span>(1)</span></p>
-                <input class="input-odd" value="O" maxlength="1" readonly></input>
+                <li id="one" class="hint-header"></li>
+                <li id="one-s" class="hint-header-s"></li>
+                <p id="one-value" class="input-odd" maxlength="1" readonly></p>
             </div>
             <div class="item">
-                <p class="hint-header">I<span>(2)</span></p>
-                <input class="input-child" value="S" maxlength="1" readonly></input>
+                <li id="two" class="hint-header"></li>
+                <li id="two-s" class="hint-header-s"></li>
+                <p id="two-value" class="input-child" maxlength="1" readonly></p>
                 </div>
             <div class="item">
-                <p class="hint-header">-<span>()</span></p>
-                <input class="input-odd" value="I" maxlength="1" readonly></input>
-            </div>
-            <div class="item-none">
-                <p class="hint-header">-<span>()</span></p>
-                <input class="input-none" value="" maxlength="1" readonly></input>
-                </div>
-            <div class="item">
-                <p class="hint-header">-<span>()</span></p>
-                <input class="input-odd" value="N" maxlength="1" readonly></input>
+                <li id="three" class="hint-header"></li>
+                <li id="three-s" class="hint-header-s"></li>
+                <p id="three-value" class="input-odd" maxlength="1" readonly></p>
             </div>
             <div class="item-none">
-                <p class="hint-header">-<span>()</span></p>        
-                <input class="input-none" value="" maxlength="1" readonly></input>
+                <li id="four" class="hint-header"></li>
+                <li id="four-s" class="hint-header-s"></li>
+                <p id="four-value" class="input-none" maxlength="1" readonly></p>
                 </div>
             <div class="item">
-                <p class="hint-header">U<span>()</span></p>
-                <input class="input-odd" value="S" maxlength="1" readonly></input>
+                <li id="five" class="hint-header"></li>
+                <li id="five-s" class="hint-header-s"></li>
+                <p id="five-value" class="input-odd" maxlength="1" readonly></p>
+            </div>
+            <div class="item-none">
+                <li id="six" class="hint-header"></li>
+                <li id="six-s" class="hint-header-s"></li>
+                <p id="six-value" class="input-none" maxlength="1" readonly></p>
+                </div>
+            <div class="item">
+                <li id="seven" class="hint-header"></li>
+                <li id="seven-s" class="hint-header-s"></li>
+                <p id="seven-value" class="input-odd" maxlength="1" readonly></p>
             </div>
             <div class="item">
-                <p class="hint-header">-<span>(3)</span></p>        
-                <input class="input-child"value="S" maxlength="1" readonly></input>
+                <li id="eight" class="hint-header"></li>
+                <li id="eight-s" class="hint-header-s"></li>
+                <p id="eight-value" class="input-child" maxlength="1" readonly></p>
                 </div>
             <div class="item">
-                <p class="hint-header">-<sapn>()</span></p>
-                <input class="input-odd"value="H" maxlength="1" readonly></input>
+                <li id="nine" class="hint-header"></li>
+                <li id="nine-s" class="hint-header-s"></li>
+                <p id="nine-value" class="input-odd" maxlength="1" readonly></p>
             </div>
         </div>
         <div class="warpper">
@@ -62,12 +74,15 @@
             </div>
         </div>
         <div class="ans-form">
-            <h1>正解 : {{ ans }}</h1>
+            {% for some in something %}
+            <h1>答え : {{ some.crossword_ans }}</h1>
             <div>
-            <p class="explanation">OSS(Open Source Software)は,ソフトウェアのソースコードが一般に公開され、商用および非商用の目的を問わずソースコードの利用・修正・再頒布が可能なソフトウェアと定義される。オープンソースライセンスが課せられたソフトウェアやパブリックドメインに置かれたソースコードとそのソフトウェアなどがそれに当たる。</p>
+            <p class="explanation">{{ some.crossword_ans_comment }}</p>
             </div>
             <a class= "ans-button" href="{% url 'cross_word:index' %}">戻る</a>
+            {% endfor %}
         </div>
     </div>
 </div>
+
 {% endblock %}
