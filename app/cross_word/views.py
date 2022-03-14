@@ -19,6 +19,7 @@ def index(request):
 def answer1(request):
     params = {
         'ans': 'OSS(Open Source Software)',
+        'comment':'OSS(Open Source Software)は,ソフトウェアのソースコードが一般に公開され、商用および非商用の目的を問わずソースコードの利用・修正・再頒布が可能なソフトウェアと定義される。オープンソースライセンスが課せられたソフトウェアやパブリックドメインに置かれたソースコードとそのソフトウェアなどがそれに当たる。',
         'vertical':[],
         'horizonal':[],
     }
