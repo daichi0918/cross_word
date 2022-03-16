@@ -15,14 +15,17 @@
                         <a class="header-content" href="#">アカウント</a>
                     </div>
                     <div class="p-2">
-                        <a class="header-content" href="{% url 'level:select' %}">クロスワード</a>
+                        <a class="header-content" href="#">クロスワード</a>
                     </div>
                     <div class="p-2">
-                        <a class="header-content" href="#">Home</a>
-                    </div>        
+                        <a class="header-content" href="{% url 'level:select' %}">Home</a>
+                    </div>  
                 </div>
             </header>
             <h1 class="title">IT クロスワード</h1>
         {% endblock %}
+        {% comment %} {% for some in something %} {% endcomment %}
+        <script type="text/javascript" src="{% static '/js/nomal/nomal.js' %}"></script>
+        {% comment %} {% endfor %} {% endcomment %}
     </body>
 </html>
