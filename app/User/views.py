@@ -1,7 +1,7 @@
 from django.shortcuts import render, redirect
 from django.views.generic.edit import CreateView, FormView
 from django.views.generic.base import TemplateView, View
-from .forms import RegistForm, UserLoginForm
+from .forms import RegisterForm, UserLoginForm
 from django.contrib.auth import authenticate, login, logout
 from django.contrib.auth.decorators import login_required
 from django.utils.decorators import method_decorator
@@ -13,10 +13,10 @@ from django.urls import reverse_lazy
 class HomeView(TemplateView):
     template_name = 'user/home.html'
 
-class RegistUserView(CreateView):
-    template_name = 'user/regist.html'
-    form_class = RegistForm
-    success_url = reverse_lazy('level:select')
+class RegisterUserView(CreateView):
+    template_name = 'user/register.html'
+    form_class = RegisterForm
+    success_url = reverse_lazy('user:home')
 
 
 class UserLoginView(LoginView):
