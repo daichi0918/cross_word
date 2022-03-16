@@ -1,0 +1,128 @@
+{% extends "./base.html" %}
+{% block title %}{{ block.super }} 初級 {% endblock %}
+{% block content %}
+<div class="back-container">
+    <div class="cross-word">
+        {{ block.super }}
+        <h2 id="level" class="level"></h2>
+        <div>
+            <h1 style="color: rgba(0, 170, 170)" class="explanation">{{ mistake }}</h1>
+        </div>
+        <div>
+            <p class="explanation">以下のクロスワードを埋めて、数字の振ってあるマスの文字を順番に入力して回答しよう</p>
+        </div>
+        <div class="nomal-container" style="--items: 4">
+            {% comment %} 1段目 {% endcomment %}
+            <div class="item-none">
+                <li id="one" class="hint-header"></li>
+                <li id="one-s" class="hint-header-s"></li>
+                <input class="input" maxlength="1"></input>
+            </div>
+            <div class="item-white">
+                <li id="two" class="hint-header"></li>
+                <li id="two-s" class="hint-header-s"></li>
+                <input class="input" maxlength="1"></input>
+            </div>
+            <div class="item-none">
+                <li id="three" class="hint-header"></li>
+                <li id="three-s" class="hint-header-s"></li>
+                <input class="input" maxlength="1"></input>
+            </div>
+            <div class="item-white">
+                <li id="four" class="hint-header"></li>
+                <li id="four-s" class="hint-header-s"></li>
+                <input class="input" maxlength="1"></input>
+            </div>
+            {% comment %} 2段目 {% endcomment %}
+            <div class="item-none">
+                <li id="five" class="hint-header"></li>
+                <li id="five-s" class="hint-header-s"></li>
+                <input class="input" maxlength="1"></input>
+            </div>
+            <div class="item-gray">
+                <li id="six" class="hint-header"></li>
+                <li id="six-s" class="hint-header-s"></li>
+                <input class="input" maxlength="1"></input>
+            </div>
+            <div class="item-none">
+                <li id="seven" class="hint-header"></li>
+                <li id="seven-s" class="hint-header-s"></li>
+                <input class="input" maxlength="1"></input>
+            </div>
+            <div class="item-gray">
+                <li id="eight" class="hint-header"></li>
+                <li id="eight-s" class="hint-header-s"></li>
+                <input class="input" maxlength="1"></input>
+            </div>
+            {% comment %} 3段目 {% endcomment %}
+            <div class="item-gray">
+                <li id="nine" class="hint-header"></li>
+                <li id="nine-s" class="hint-header-s"></li>
+                <input class="input" maxlength="1"></input>
+            </div>
+            <div class="item-white">
+                <li id="ten" class="hint-header"></li>
+                <li id="ten-s" class="hint-header-s"></li>
+                <input class="input" maxlength="1"></input>
+            </div>
+            <div class="item-gray">
+                <li id="eleven" class="hint-header"></li>
+                <li id="eleven-s" class="hint-header-s"></li>
+                <input class="input" maxlength="1"></input>
+            </div>
+            <div class="item-white">
+                <li id="twelve" class="hint-header"></li>
+                <li id="twelve-s" class="hint-header-s"></li>
+                <input class="input" maxlength="1"></input>
+            </div>
+            {% comment %} 4段目 {% endcomment %}
+            <div class="item-none">
+                <li id="thirteen" class="hint-header"></li>
+                <li id="thirteen-s" class="hint-header-s"></li>
+                <input class="input" maxlength="1"></input>
+            </div>
+            <div class="item-gray">
+                <li id="fourteen" class="hint-header"></li>
+                <li id="fourteen-s" class="hint-header-s"></li>
+                <input class="input" maxlength="1"></input>
+            </div>
+            <div class="item-none">
+                <li id="fifteen" class="hint-header"></li>
+                <li id="fifteen-s" class="hint-header-s"></li>
+                <input class="input" maxlength="1"></input>
+            </div>
+            <div class="item-gray">
+                <li id="sixteen" class="hint-header"></li>
+                <li id="sixteen-s" class="hint-header-s"></li>
+                <input class="input" maxlength="1"></input>
+            </div>
+            {% comment %}  {% endcomment %}
+        </div>
+        <div class="clearfix warpper">
+            <div class="box1">
+                <ul>
+                    <li class="hint">横のヒント</li>
+                    {% for item in horizonal %}
+                    <li class="hint">{{ item.hint }}</li>
+                    {% endfor %}
+                </ul>
+            </div>
+            <div class="box2">
+                <ul>
+                    <li class="hint">縦のヒント</li>
+                    {% for item in vertical %}
+                    <li class="hint">{{ item.hint }}</li>
+                    {% endfor %}
+                </ul>
+            </div>
+        </div>
+        <div class="ans-form">
+            <form method="POST">
+                {% csrf_token %}
+                <input class="ans-box" type="value" id='word' name="word" maxlength="3"/> 
+                <button type="submit">決定</button>
+            </form>
+        </div>
+    </div>
+</div>
+{% endblock %}

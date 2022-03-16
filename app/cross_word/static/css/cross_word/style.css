@@ -25,12 +25,6 @@ body{
     text-align: center;
 }
 
-.hint-header {
-    margin-right: 3px;
-    margin-left: 3px;
-    font-size: 16px;
-    color: gray;
-}
 
 /* 説明 */
 .explanation {
@@ -75,84 +69,71 @@ button {
 /* クロスワードのボード、サイズ、範囲 */
 .container {
     display: grid;
-    grid-template-columns: repeat(var(--items), min(calc(45vh/var(--items)), calc(45vw/var(--items))));
-    grid-template-rows: repeat(var(--items), min(calc(45vh/var(--items)), calc(45vw/var(--items))));
+    grid-template-columns: repeat(var(--items), min(calc(47vh/var(--items)), calc(47vw/var(--items))));
+    grid-template-rows: repeat(var(--items), min(calc(47vh/var(--items)), calc(47vw/var(--items))));
     align-content: center;
     justify-content: center;
 }
 
-/* ボードのブロック */
-.item {
-    width: 100%;
-    height: 100%;
-    box-sizing: border-box;
-    display: block;
+.nomal-container {
+    display: grid;
+    grid-template-columns: repeat(var(--items), min(calc(47vh/var(--items)), calc(47vw/var(--items))));
+    grid-template-rows: repeat(var(--items), min(calc(47vh/var(--items)), calc(47vw/var(--items))));
+    align-content: center;
+    justify-content: center;
 }
 
+/* クロスワードのマスに書かれたヒント */
+.hint-header {
+    margin-right: 3px;
+    margin-left: 3px;
+    font-size: 16px;
+    color: rgb(70, 70, 70);
+    display: inline;
+}
+
+.hint-header-s {
+    margin-right: 3px;
+    margin-left: 3px;
+    font-size: 16px;
+    color: rgb(70, 70, 70);
+    display: inline;
+    float: right;
+}
+
+/* 何も書き込まないブロック */
 .item-none {
     width: 100%;
     height: 100%;
     box-sizing: border-box;
     display: block;
-    background-color: gray;
+    background-color: rgb(70, 70, 70);
 }
 
-p span{
-    float: right;
+/* grayブロック */
+.item-gray {
+    background-color: rgb(220, 220, 220);
 }
 
-/* 偶数ブロック */
-.item:nth-child(odd) {
-    background-color: rgb(230, 230, 230);
-}
-
-/* 奇数ブロック */
-.item:nth-child(even) {
+/* whiteブロック */
+.item-white {
     background-color: rgb(240, 240, 240);
 }
 
-/* 偶数ブロック */
-.input-odd {
-    background-color: rgb(230, 230, 230);
-    border: rgb(230, 230, 230);
-    font-size: 300%;
-    max-width: 40%;
-    margin-left: 30%;
-}
-
-/* 奇数ブロック */
-.input-child {
-    background-color: rgb(240, 240, 240);
+/* inputスペース */
+.input {
+    background-color: rgb(240, 240, 240, 0);
     border: rgb(240, 240, 240);
     font-size: 300%;
     max-width: 40%;
     margin-left: 30%;
+    color: rgb(70, 70, 70);
 }
 
 .clearfix:after {
     content: "";         /* 擬似要素を実体化 */
     clear: both;        /* floatを解除する */
     display: block;     /* ブロック要素にする */
-}
-
-/* 横のヒントボックス
-.box1 {
-    width:300px;
-    height:100px;
-}
-/* 縦のヒントボックス */
-/* .box2 {
-    width: 300px;
-    height:100px;
-} */ 
-
-/* 文字未入力ブロック */
-.input-none {
-    background-color: gray;
-    border: rgb(240, 240, 240);
-    font-size: 300%;
-    max-width: 40%;
-    margin-left: 30%;
 }
 
 /* クリック時のアウトライン設定 */
@@ -180,7 +161,7 @@ p {
 	font-size: 160%;
 	font-weight: bold;
 }
-
+/* 答えのフォーム */
 .wrapper {
     display: flex;
     flex-direction: row;
@@ -216,9 +197,15 @@ header {
     padding-right: 20px;
     text-align: center;
     float: right;
-    font-weight: bold;
+    font-size: 18px;
 }
-
+/* ヘッダー */
 .header-content {
     color: rgba(40, 150, 150);
+}
+
+.header-content:hover {
+    color: white;
+    font-weight: bold;
+
 }
