@@ -21,12 +21,23 @@ def easy(request):
     return render(request, 'level/easy.html', params)
 
 def nomal(request):
-    # return render(request, 'nomal.html')
-    return render(request, 'level/nomal.html')
+    # return render(request, 'level/nomal.html')
+    params = {
+    'friend': [],
+    }
+    params['friend']=Friend.objects.all()
+    questionModel = {'question': QuestionAll.objects.all()}
+    return render(request, 'level/nomal.html', params)
+
 
 def hard(request):
-    # return render(request, 'hard.html')
-    return render(request, 'level/hard.html')
+    # return render(request, 'level/hard.html')
+    params = {
+        'friend': [],
+    }
+    params['friend']=Friend.objects.all()
+    questionModel = {'question': QuestionAll.objects.all()}
+    return render(request, 'level/hard.html', params)
 
 # def list(request):
 #     # question_list = QuestionAll.objects.all()

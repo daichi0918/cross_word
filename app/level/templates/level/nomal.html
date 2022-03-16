@@ -1,5 +1,53 @@
-{% extends './base.html' %}
-
+{% extends "./base.html" %}
+{% block title %}{{ block.super }} 初級 {% endblock %}
 {% block content %}
-    <p>これは中級です</p>
+
+<div class="back-container">
+  <!-- cross_wordページに直接URLで遷移するためのもの -->
+  <!-- <a href="http://localhost:8004/cross_word/">
+    <button type="button" class="btn mx-auto btn-wrapper btn-success">
+      問題1
+    </button> 
+  </a> -->
+
+  <!-- データーベースから取り出したい！ -->
+  <div>
+      {{ block.super }}
+    <table class="center" style="border-collapse: collapse">
+      <tr>
+        <th>
+          <h3>
+            問題一覧
+          </h3>
+        </th>
+      </tr>
+      <tr>
+        <td>
+          <p class="question">問題１</p>
+        </td>
+        <td>
+           <!-- <button onclick="location.href='http://localhost:8004/cross_word/'" class="btn-width mx-auto btn-wrapper">問題:{{item.age}}</button> -->
+          <div class="button mx-auto btn-wrapper">
+            <a href="{% url 'cross_word:index' %}">
+              <button>
+                挑戦する！
+              </button>
+            </a>
+          </div>
+        </td>
+      </tr>
+      <!-- {% for item in friend %}
+      <tr class="center">
+        <td>
+          {{item.name}}
+        </td>
+        <td>
+           <button onclick="location.href='http://localhost:8004/cross_word/'" class="btn-width mx-auto btn-wrapper">問題:{{item.age}}</button>
+          <div class="btn-width mx-auto btn-wrapper"><a href="{% url 'cross_word:index' %}">問題１</a></div>
+        </td>
+      </tr>
+      {% endfor %} -->
+    </table>
+  </div>
+</div>
 {% endblock content %}
