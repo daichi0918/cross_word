@@ -1,4 +1,19 @@
 {% extends './base.html' %}
 {% block content %}
 <h1>ITクロスワード</h1>
-{% endblock %}
+<div class="box">
+  <a href="{% url 'level:select' %}">問題に挑戦</a>
+</div>
+
+<div class="box3">
+  <p>遊び方</p>
+</div>
+<div class="box4">
+  <p>問題に挑戦ボタンから難易度を選択！</p>
+  <p>難易度は初級・中級・上級の３種類</p>
+  <p>ヒントを元にクロスワード内に直接ワードを入れよう</p>
+  <p>クロスワード内の一部を取り出して、IT用語を解答しよう!</p>
+</div>
+
+{% endblock %} 
+
