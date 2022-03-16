@@ -28,3 +28,4 @@ class UserLoginForm(AuthenticationForm):
     password = forms.CharField(label='', 
     widget=forms.PasswordInput(attrs={'placeholder': 'password'}))
     remember = forms.BooleanField(label='ログイン状態を保持する', required=False)
+    
