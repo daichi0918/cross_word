@@ -1,68 +1,70 @@
 {% extends "./base.html" %}
 {% block title %}{{ block.super }} 初級 {% endblock %}
 {% block content %}
+{% load static %}
+<script type="text/javascript" src="{% static '/js/easy/easy.js' %}"></script>
 <div class="back-container">
     <div class="cross-word">
         {{ block.super }}
         <h2 id="level" class="level"></h2>
         <div>
-            <h1 style="color: rgba(0, 170, 170)" class="explanation">{{ explanation }}</h1>
+            <h1 style="color: yerrow" class="explanation">{{ explanation }}</h1>
         </div>
         <div class="container" style="--items: 3">
             {% comment %} 1段目 {% endcomment %}
             <div class="item-gray">
                 <li id="one" class="hint-header"></li>
                 <li id="one-s" class="hint-header-s"></li>
-                <p id="one-value" class="input" maxlength="1" readonly></p>
+                <p id="one-value" class="input-easy" maxlength="1" readonly></p>
             </div>
             <div class="item-white">
                 <li id="two" class="hint-header"></li>
                 <li id="two-s" class="hint-header-s"></li>
-                <p id="two-value" class="input" maxlength="1" readonly></p>
+                <p id="two-value" class="input-easy" maxlength="1" readonly></p>
                 </div>
             <div class="item-gray">
                 <li id="three" class="hint-header"></li>
                 <li id="three-s" class="hint-header-s"></li>
-                <p id="three-value" class="input" maxlength="1" readonly></p>
+                <p id="three-value" class="input-easy" maxlength="1" readonly></p>
             </div>
             {% comment %} 2段目 {% endcomment %}
             <div class="item-none">
                 <li id="four" class="hint-header"></li>
                 <li id="four-s" class="hint-header-s"></li>
-                <p id="four-value" class="input" maxlength="1" readonly></p>
+                <p id="four-value" class="input-easy" maxlength="1" readonly></p>
                 </div>
             <div class="item-gray">
                 <li id="five" class="hint-header"></li>
                 <li id="five-s" class="hint-header-s"></li>
-                <p id="five-value" class="input" maxlength="1" readonly></p>
+                <p id="five-value" class="input-easy" maxlength="1" readonly></p>
             </div>
             <div class="item-none">
                 <li id="six" class="hint-header"></li>
                 <li id="six-s" class="hint-header-s"></li>
-                <p id="six-value" class="input" maxlength="1" readonly></p>
+                <p id="six-value" class="input-easy" maxlength="1" readonly></p>
             </div>
             {% comment %} 3段目 {% endcomment %}
             <div class="item-gray">
                 <li id="seven" class="hint-header"></li>
                 <li id="seven-s" class="hint-header-s"></li>
-                <p id="seven-value" class="input" maxlength="1" readonly></p>
+                <p id="seven-value" class="input-easy" maxlength="1" readonly></p>
             </div>
             <div class="item-white">
                 <li id="eight" class="hint-header"></li>
                 <li id="eight-s" class="hint-header-s"></li>
-                <p id="eight-value" class="input" maxlength="1" readonly></p>
+                <p id="eight-value" class="input-easy" maxlength="1" readonly></p>
                 </div>
             <div class="item-gray">
                 <li id="nine" class="hint-header"></li>
                 <li id="nine-s" class="hint-header-s"></li>
-                <p id="nine-value" class="input" maxlength="1" readonly></p>
+                <p id="nine-value" class="input-easy" maxlength="1" readonly></p>
             </div>
             {% comment %}  {% endcomment %}
         </div>
         <div class="warpper">
             <div class="box1">
                 <ul>
-                    <li class="hint">横のヒント</li>
+                    <li class="hint-title">横のヒント</li>
                     {% for item in horizonal %}
                     <li class="hint">{{ item.hint }}</li>
                     {% endfor %}
@@ -70,7 +72,7 @@
             </div>
             <div class="box2">
                 <ul>
-                    <li class="hint">縦のヒント</li>
+                    <li class="hint-title">縦のヒント</li>
                     {% for item in vertical %}
                     <li class="hint">{{ item.hint }}</li>
                     {% endfor %}
@@ -78,13 +80,13 @@
             </div>
         </div>
         <div class="ans-form">
-            {% comment %} {% for some in something %} {% endcomment %}
-            <h1>答え : {{ some.crossword_ans }}</h1>
+            {% for some in something %}
+            <h2 class="ans">答え : {{ some.crossword_ans }}</h2>
             <div>
             <p class="explanation">{{ some.crossword_ans_comment }}</p>
             </div>
             <a class= "ans-button" href="{% url 'cross_word:easy' %}">戻る</a>
-            {% comment %} {% endfor %} {% endcomment %}
+            {% endfor %}
         </div>
     </div>
 </div>

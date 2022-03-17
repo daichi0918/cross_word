@@ -1,5 +1,21 @@
 {% extends "./base.html" %}
 {% block content %}
+    <!-- <p>難易度を選択して下さい</p>
+    <a href="{% url 'level:easy' %}">初級</a>
+    <a href="{% url 'level:nomal' %}">中級</a>
+    <a href="{% url 'level:hard' %}">上級</a> -->
+    <div class="card">
+        <div class="card-body"></div>
+            <div class="card-title">
+                <h4>難易度選択</h4>
+            </div>
+            <div class="card-text">
+                <p>難易度を選択してください</p>
+            </div>
+            <div class="card-body"><a href="{% url 'cross_word:easy' %}">初級</a></div>
+            <div class="card-body"><a href="{% url 'cross_word:easy2' %}">初級2</a></div>
+            <div class="card-body"><a href="{% url 'cross_word:nomal' %}">中級</a></div>
+            <div class="card-body"><a href="{% url 'cross_word:hard' %}">上級</a></div>
 {% load static %}
 <div class="back-container">
     <div class="cross-word">

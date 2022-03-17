@@ -1,5 +1,20 @@
 body{
     margin: 0; padding: 0;
+    background-color: rgba(0,170,170, 0.1);
+    background-color: rgb(10, 200, 200);
+    /* background-image: linear-gradient(45deg, rgba(0,170,170, 0.1)25%, transparent 25%, transparent 75%, rgba(0,170,170, 0.1)75%, rgba(0,170,170, 0.1)),
+    linear-gradient(45deg, rgba(0,170,170, 0.1)25%, transparent 25%, transparent 75%, rgba(0,170,170, 0.1)75%, rgba(0,170,170, 0.1));
+    background-size: 60px 60px;
+    background-position: 0 0, 30px 30px; */
+
+}
+
+span {
+    text-shadow: 
+        0.1em 0.12em 0 black,  
+		0.08em 0.05em 0 rgba(0, 0, 0, 0.6);
+    font-size:120%;
+    color: yellow;
 }
 
 /* 画面上部のタイトル */
@@ -7,22 +22,49 @@ body{
     text-align: center;
     margin-top: 0;
     padding-top: 100px;
-    padding-bottom: 20px;
+    margin-bottom: 30px;
+    color:rgba(40, 250, 250);
+    font-size: 300%;
+    text-shadow: 
+        0.1em 0.12em 0 black, 
+		0.08em 0.05em 0 rgba(0, 0, 0, 0.6);
 }
 
 /* 画面上部レベル表示 */
 .level {
     text-align: center;
     padding-bottom: 10px;
-
+    color:rgba(40, 250, 250);
+    text-shadow: 
+    0.1em 0.12em 0 black, 
+    0.08em 0.05em 0 rgba(0, 0, 0);
 }
 
 /* 画面下部ヒント表示 */
+
+.hint-title {
+    list-style: none;
+    width:100%;
+    padding-bottom: 10px;
+    font-weight: bold;
+    text-align: center;
+    color: yellow;
+    text-shadow: 
+    0.1em 0.12em 0 black, 
+    0.08em 0.05em 0 rgba(0, 0, 0);
+    
+}
+
 .hint {
     list-style: none;
     padding-bottom: 10px;
     font-weight: bold;
     text-align: center;
+    color: gray;
+    text-shadow: 
+    0.1em 0.12em 0 black, 
+    0.08em 0.05em 0 rgba(0, 0, 0);
+    
 }
 
 
@@ -31,6 +73,10 @@ body{
     text-align: center;
     margin-bottom: 30px;
     font-weight: bold;
+    color: yellow;
+    text-shadow: 
+    0.1em 0.12em 0 black, 
+    0.08em 0.05em 0 rgba(0, 0, 0, 0.6);
 }
 
 /* 画面下部答え入力画面 */
@@ -51,6 +97,14 @@ body{
     border-radius: 12px;
 }
 
+/* 回答正解時の答え */
+.ans {
+    color: yellow;
+    text-shadow: 
+    0.1em 0.12em 0 black,  
+    0.08em 0.05em 0 rgba(0, 0, 0, 0.6);
+}
+
 /* 決定ボタン */
 button {
     margin-left: 20px;
@@ -60,7 +114,6 @@ button {
 }
 /* 背景 */
 .back-container {
-    background-color: rgba(0, 170, 170, 0.3);
     height: 100%;
     border-radius: 12px;
     margin-top: 0;
@@ -69,16 +122,8 @@ button {
 /* クロスワードのボード、サイズ、範囲 */
 .container {
     display: grid;
-    grid-template-columns: repeat(var(--items), min(calc(47vh/var(--items)), calc(47vw/var(--items))));
-    grid-template-rows: repeat(var(--items), min(calc(47vh/var(--items)), calc(47vw/var(--items))));
-    align-content: center;
-    justify-content: center;
-}
-
-.nomal-container {
-    display: grid;
-    grid-template-columns: repeat(var(--items), min(calc(47vh/var(--items)), calc(47vw/var(--items))));
-    grid-template-rows: repeat(var(--items), min(calc(47vh/var(--items)), calc(47vw/var(--items))));
+    grid-template-columns: repeat(var(--items), min(calc(49vh/var(--items)), calc(49vw/var(--items))));
+    grid-template-rows: repeat(var(--items), min(calc(49vh/var(--items)), calc(49vw/var(--items))));
     align-content: center;
     justify-content: center;
 }
@@ -107,21 +152,26 @@ button {
     height: 100%;
     box-sizing: border-box;
     display: block;
-    background-color: rgb(70, 70, 70);
-}
+    background-color: black;
+    border: 1px solid rgba(0, 0, 0, 0.6);
 
+}
+/* rgb(130, 130, 130, 0.7) */
 /* grayブロック */
 .item-gray {
-    background-color: rgb(220, 220, 220);
+    background-color: rgb(230, 230, 230);
+    border: 1px solid rgba(0, 0, 0, 0.6);
 }
 
 /* whiteブロック */
 .item-white {
     background-color: rgb(240, 240, 240);
+    border: 1px solid rgba(0, 0, 0, 0.6);
+    
 }
 
 /* inputスペース */
-.input {
+.input-easy {
     background-color: rgb(240, 240, 240, 0);
     border: rgb(240, 240, 240);
     font-size: 300%;
@@ -129,6 +179,25 @@ button {
     margin-left: 30%;
     color: rgb(70, 70, 70);
 }
+
+.input-nomal {
+    background-color: rgb(240, 240, 240, 0);
+    border: rgb(240, 240, 240);
+    font-size: 200%;
+    max-width: 40%;
+    margin-left: 30%;
+    color: rgb(70, 70, 70);
+}
+
+.input-hard {
+    background-color: rgb(240, 240, 240, 0);
+    border: rgb(240, 240, 240);
+    font-size: 150%;
+    max-width: 40%;
+    margin-left: 30%;
+    color: rgb(70, 70, 70);
+}
+
 
 .clearfix:after {
     content: "";         /* 擬似要素を実体化 */
@@ -148,18 +217,23 @@ p {
 
 /* 戻るボタン */
 .ans-button {
-    font-size: 150%;
-    background-color: rgba(0, 170, 170, 0.2);
-    color: rgb(40, 150, 150);
+    font-size: 100%;
+    padding: 0 5px;
+    color: black;
+    font-weight: bold;
+    text-decoration: none;
     cursor: pointer;
-    border-radius: 6px;
+    border-radius: 4px;
+    border: 1px solid black;
+    font-weight: bold;
+    background-color: rgba(0, 170, 170,0.2);
+
 }
 
 /* カーソルを合わせたときに表示を変える */
 .ans-button:hover{
-	color: rgb(40, 150, 150);
-	font-size: 160%;
-	font-weight: bold;
+    background-color: rgba(0, 170, 170,0.3);
+
 }
 /* 答えのフォーム */
 .wrapper {
@@ -170,7 +244,7 @@ p {
 }
 
 .box {
-    background-color: #555555;
+    background-color: rgba(0, 0, 0, 0.6);
     color: white;
     width: 200px;
     margin: 5px;
@@ -187,8 +261,30 @@ header {
 }
 
 .d-flex {
-    background-color: rgba(0, 170, 170, 0.3);
-    height:70px;
+    background: linear-gradient(rgba(30, 170, 170, 0.9), rgba(0, 170, 170,0));
+    /* background: linear-gradient(rgba(66, 66, 66, 0.9), rgba(255, 255, 255, 0)); */
+    height:60px;
+    margin: 0; padding: 0;
+    background-image: linear-gradient(45deg, rgba(0,170,170, 0.2)25%, transparent 25%, transparent 75%, rgba(0,170,170, 0.2)75%, rgba(0,170,170, 0.2)),
+    linear-gradient(45deg, rgba(0,170,170, 0.2)25%, transparent 25%, transparent 75%, rgba(0,170,170, 0.2)75%, rgba(0,170,170, 0.2));
+    background-size: 60px 60px;
+    background-position: 0 0, 30px 30px;
+}
+
+.p-1 {
+    color: rgb(10, 250, 250);
+    padding-top: 20px;
+    padding-left: 30px;
+    padding-right: 20px;
+    text-align: center;
+    float: left;
+    font-size: 36px;
+    font-weight: bold;
+	line-height:0.95em;
+	text-shadow: 
+        0.1em 0.12em 0 black, 
+		0.08em 0.05em 0 rgba(0, 0, 0, 0.6);
+        
 }
 
 .p-2 {
@@ -201,7 +297,10 @@ header {
 }
 /* ヘッダー */
 .header-content {
-    color: rgba(40, 150, 150);
+    color:rgb(100, 250, 250);
+    font-weight: bold;
+    text-shadow: 2px 1px 0 rgba(0, 0, 0, 0.6);
+    text-decoration: none;
 }
 
 .header-content:hover {

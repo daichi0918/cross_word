@@ -3,7 +3,7 @@ window.onload = function() {
     // alert("dddddddddddd");
 // 空白は全角で空ける
 // 値を渡すことができない場合処理が途中で止まる
-document.getElementById("level").textContent="中級　その壱";
+    document.getElementById("level").textContent="中級　その壱";
 
     document.getElementById("one").textContent="　";
     document.getElementById("one-s").textContent="　";
