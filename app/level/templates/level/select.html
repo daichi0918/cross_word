@@ -1,5 +1,4 @@
-{% extends './base.html' %}
-{% load static %}
+{% extends "./base.html" %}
 {% block content %}
     <!-- <p>難易度を選択して下さい</p>
     <a href="{% url 'level:easy' %}">初級</a>
@@ -17,10 +16,37 @@
             <div class="card-body"><a href="{% url 'cross_word:easy2' %}">初級2</a></div>
             <div class="card-body"><a href="{% url 'cross_word:nomal' %}">中級</a></div>
             <div class="card-body"><a href="{% url 'cross_word:hard' %}">上級</a></div>
+{% load static %}
+<div class="back-container">
+    <div class="cross-word">
+        {{ block.super }}
+        <div class="level">
+            <h4>難易度を選択してください</h4>
+            <button type="button" onclick="location.href='{% url 'level:easy' %}'" class="btn-width mx-auto btn-wrapper">
+                初級
+            </button>
+            <button type="button" onclick="location.href='{% url 'level:nomal' %}'" class="btn-width mx-auto btn-wrapper">
+                中級
+            </button>
+            <button type="button" onclick="location.href='{% url 'level:hard' %}'" class="btn-width mx-auto btn-wrapper">
+                上級
+            </button>
+            <!-- <button type="button" class="btn mx-auto btn-success btn-wrapper">
+                <a href="{% url 'level:easy' %}">
+                    初級
+                </a>
+            </button>
+            <button type="button" class="btn mx-auto btn-success btn-wrapper">
+                <a href="{% url 'level:nomal' %}">
+                    中級
+                </a>
+            </button>
+            <button type="button" class="btn mx-auto btn-success btn-wrapper">
+                <a href="{% url 'level:hard' %}">
+                    上級
+                </a>
+            </button> -->
+        </div>
     </div>
-        <!-- <h4 class="card-title">難易度選択</h4>
-        <p class="card-text">難易度を選択して下さい</p> -->
-            <!-- <a class="card-body"><a href="{% url 'level:easy' %}">初級</a></a>
-            <li class="card-body"><a href="{% url 'level:nomal' %}">中級</a></li>
-            <li class="card-body"><a href="{% url 'level:hard' %}">上級</a></li> -->
+</div>
 {% endblock content %}
