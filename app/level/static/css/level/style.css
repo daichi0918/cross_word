@@ -1,0 +1,125 @@
+body{
+    margin: 0; padding: 0;
+    background-color: rgba(0, 170, 170, 0.3);
+
+}
+
+/* 画面上部のタイトル */
+.title {
+    text-align: center;
+    margin-top: 0;
+    padding-top: 100px;
+    padding-bottom: 20px;
+}
+
+/* 画面上部レベル表示 */
+.level {
+    text-align: center;
+    padding-bottom: 10px;
+}
+
+/* 決定ボタン */
+button {
+    /* margin-left: 20px; */
+    text-align: center;
+    background-color: rgba(0, 170, 170, 0.2);
+    border-radius:6px;
+}
+
+/* 背景 */
+.back-container {
+    /* background-color: rgba(0, 170, 170, 0.3); */
+    height: 640px;
+    border-radius: 12px;
+    margin-top: 0;
+}
+
+p span{
+    float: right;
+}
+
+.clearfix:after {
+    content: "";         /* 擬似要素を実体化 */
+    clear: both;        /* floatを解除する */
+    display: block;     /* ブロック要素にする */
+}
+
+/* クリック時のアウトライン設定 */
+:focus {
+    outline: none;
+}
+
+/* Pタグ */
+p {
+    margin: 0%;
+}
+
+/* 戻るボタン */
+.ans-button {
+    font-size: 150%;
+    background-color: rgba(0, 170, 170, 0.2);
+    color: rgb(40, 150, 150);
+    cursor: pointer;
+    border-radius: 6px;
+}
+
+/* カーソルを合わせたときに表示を変える */
+.ans-button:hover{
+	color: rgb(40, 150, 150);
+	font-size: 160%;
+	font-weight: bold;
+}
+
+.wrapper {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center; 
+}
+
+.box {
+    background-color: #555555;
+    color: white;
+    width: 200px;
+    margin: 5px;
+    padding: 12px;
+}
+
+/* ヘッダー部分の作成 */
+header {
+    position: fixed;
+    margin-top: 0;
+    margin-right: 20px;
+    width: 100%;
+
+}
+
+.d-flex {
+    background-color: rgba(0, 170, 170, 0.3);
+    height:70px;
+}
+
+.p-2 {
+    padding-top: 30px;
+    padding-left: 20px;
+    padding-right: 20px;
+    text-align: center;
+    float: right;
+    font-weight: bold;
+}
+
+.header-content {
+    color: rgba(40, 150, 150);
+}
+
+/* 要素を真ん中に */
+.center {
+    /* text-align: center; */
+    margin-left: auto;
+    margin-right: auto;
+}
+
+/* 問題のところの微調整 */
+.question {
+    margin-right: 50px;
+}
