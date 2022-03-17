@@ -9,12 +9,12 @@
 
 {% block content %}
   <form method="POST">  
-    <h1><span>IT</span> Cross_word</h1>
+    <h1>IT クロスワード</h1>
     {% csrf_token %}
     {{ form.as_p }}
     <input type="hidden" name="next" value="{{ request.GET.next }}">
     <input class="btn" type="submit" value="ログイン">
-    <a class="regist" href="{% url 'user:regist' %}">新規登録はこちらから</a>
+    <a class="regist" href="{% url 'user:register' %}">新規登録はこちらから</a>
   </form>
     
 {% endblock %}
