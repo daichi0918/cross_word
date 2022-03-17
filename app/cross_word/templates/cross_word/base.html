@@ -11,21 +11,16 @@
         {% block content %}
             <header>
                 <div class="d-flex">
+                    <div class="p-1"><span>IT</span>クロスワード</div>
                     <div class="p-2">
-                        <a class="header-content" href="#">アカウント</a>
-                    </div>
-                    <div class="p-2">
-                        <a class="header-content" href="#">クロスワード</a>
+                        <a class="header-content" href="{% url 'user:login' %}">ログアウト</a>
                     </div>
                     <div class="p-2">
                         <a class="header-content" href="{% url 'level:select' %}">Home</a>
                     </div>  
                 </div>
             </header>
-            <h1 class="title">IT クロスワード</h1>
+            <h1 class="title"><span>IT</span> クロスワード</h1>
         {% endblock %}
-        {% comment %} {% for some in something %} {% endcomment %}
-        <script type="text/javascript" src="{% static '/js/nomal/nomal.js' %}"></script>
-        {% comment %} {% endfor %} {% endcomment %}
     </body>
 </html>
