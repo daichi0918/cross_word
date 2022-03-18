@@ -2,7 +2,7 @@
 {% block title %}{{ block.super }} 中級 {% endblock %}
 {% block content %}
 {% load static %}
-<script type="text/javascript" src="{% static '/js/nomal/nomal.js' %}"></script>
+<script type="text/javascript" src="{% static '/js/nomal/nomal2.js' %}"></script>
 <div class="back-container">
     <div class="cross-word">
         {{ block.super }}
@@ -15,7 +15,7 @@
         </div>
         <div class="container" style="--items: 4">
             {% comment %} 1段目 {% endcomment %}
-            <div class="item-none">
+            <div class="item-gray">
                 <li id="one" class="hint-header"></li>
                 <li id="one-s" class="hint-header-s"></li>
                 <input class="input-nomal" maxlength="1"></input>
@@ -25,7 +25,7 @@
                 <li id="two-s" class="hint-header-s"></li>
                 <input class="input-nomal" maxlength="1"></input>
             </div>
-            <div class="item-none">
+            <div class="item-gray">
                 <li id="three" class="hint-header"></li>
                 <li id="three-s" class="hint-header-s"></li>
                 <input class="input-nomal" maxlength="1"></input>
@@ -36,7 +36,7 @@
                 <input class="input-nomal" maxlength="1"></input>
             </div>
             {% comment %} 2段目 {% endcomment %}
-            <div class="item-none">
+            <div class="item-white">
                 <li id="five" class="hint-header"></li>
                 <li id="five-s" class="hint-header-s"></li>
                 <input class="input-nomal" maxlength="1"></input>
@@ -51,7 +51,7 @@
                 <li id="seven-s" class="hint-header-s"></li>
                 <input class="input-nomal" maxlength="1"></input>
             </div>
-            <div class="item-gray">
+            <div class="item-none">
                 <li id="eight" class="hint-header"></li>
                 <li id="eight-s" class="hint-header-s"></li>
                 <input class="input-nomal" maxlength="1"></input>
@@ -67,18 +67,18 @@
                 <li id="ten-s" class="hint-header-s"></li>
                 <input class="input-nomal" maxlength="1"></input>
             </div>
-            <div class="item-gray">
+            <div class="item-none">
                 <li id="eleven" class="hint-header"></li>
                 <li id="eleven-s" class="hint-header-s"></li>
                 <input class="input-nomal" maxlength="1"></input>
             </div>
-            <div class="item-white">
+            <div class="item-none">
                 <li id="twelve" class="hint-header"></li>
                 <li id="twelve-s" class="hint-header-s"></li>
                 <input class="input-nomal" maxlength="1"></input>
             </div>
             {% comment %} 4段目 {% endcomment %}
-            <div class="item-none">
+            <div class="item-white">
                 <li id="thirteen" class="hint-header"></li>
                 <li id="thirteen-s" class="hint-header-s"></li>
                 <input class="input-nomal" maxlength="1"></input>
@@ -88,7 +88,7 @@
                 <li id="fourteen-s" class="hint-header-s"></li>
                 <input class="input-nomal" maxlength="1"></input>
             </div>
-            <div class="item-none">
+            <div class="item-white">
                 <li id="fifteen" class="hint-header"></li>
                 <li id="fifteen-s" class="hint-header-s"></li>
                 <input class="input-nomal" maxlength="1"></input>
