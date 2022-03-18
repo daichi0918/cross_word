@@ -8,8 +8,9 @@
         {{ block.super }}
         <h2 id="level" class="level"></h2>
         <div>
-            <h1 style="color: yerrow" class="explanation">{{ explanation }}</h1>
+            <h1 class="explanation">{{ explanation }}</h1>
         </div>
+    <div class="content-horizonal">
         <div class="container" style="--items: 3">
             {% comment %} 1段目 {% endcomment %}
             <div class="item-gray">
@@ -79,6 +80,7 @@
                 </ul>
             </div>
         </div>
+    </div>
         <div class="ans-form">
             {% for some in something %}
             <h2 class="ans">答え : {{ some.crossword_ans }}</h2>

@@ -8,7 +8,7 @@
         {{ block.super }}
         <h2 id="level" class="level"></h2>
         <div>
-            <h1 style="color: rgba(0, 170, 170)" class="explanation">{{ mistake }}</h1>
+            <h1 class="explanation">{{ mistake }}</h1>
         </div>
         <div>
             <p class="explanation">以下のクロスワードを埋めて、数字の振ってあるマスの文字を順番に入力して回答しよう</p>
@@ -79,7 +79,7 @@
                     {% for item in vertical %}
                     <li class="hint">{{ item.hint }}</li>
                     {% endfor %}
-                </ul>
+                </ul> 
             </div>
         </div>
         <div class="ans-form">
