@@ -20,8 +20,8 @@ def easy(request):
     # questionModel = {'question': QuestionAll.objects.all()}
     # return render(request, 'level/easy.html', params)
 
-def nomal(request):
-    return render(request, 'level/nomal.html')
+def normal(request):
+    return render(request, 'level/normal.html')
     # params = {
     # 'friend': [],
     # }

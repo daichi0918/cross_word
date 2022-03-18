@@ -3,26 +3,26 @@
     <head>
         <meta charset='utf-8'>
         {% load static %}
-        <link rel="stylesheet" type = "text/css" href="{% static 'css/level/style.css' %}">
+        <link rel="stylesheet" type = "text/css" href="{% static 'css/cross_word/style.css' %}">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <title>{% block title %}クロスワードアプリ{% endblock %}</title>
     </head>
     <body>
         {% block content %}
-            <header">
+            <header>
                 <div class="d-flex">
+                    <a class="p-1" type="button" href="{% url 'level:select' %}"><span>IT</span>クロスワード</a>
                     <div class="p-2">
                         <a class="header-content" href="{% url 'user:login' %}">ログアウト</a>
                     </div>
                     <div class="p-2">
-                        <a class="header-content" href="{% url 'level:select' %}">クロスワード</a>
-                    </div>
-                    <!-- <div class="p-2">
-                        <a class="header-content" href="{% url 'user:login' %}">Home</a>
-                    </div>         -->
+                        <a class="header-content" href="{% url 'user:home' %}">ホーム</a>
+                    </div>  
                 </div>
             </header>
-            <h1 class="title">IT クロスワード</h1>
+            <div class="title" >
+                <a class="title-a" type="button" href="{% url 'level:select' %}"><span>IT</span> クロスワード</a>
+            </div>
         {% endblock %}
     </body>
 </html>
