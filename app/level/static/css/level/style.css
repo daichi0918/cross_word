@@ -112,9 +112,10 @@ header {
     color: rgba(40, 150, 150);
 }
 
+/* levelアプリ用CSS */
 /* 要素を真ん中に */
 .center {
-    /* text-align: center; */
+    text-align: center;
     margin-left: auto;
     margin-right: auto;
 }
@@ -122,4 +123,25 @@ header {
 /* 問題のところの微調整 */
 .question {
     margin-right: 50px;
+}
+
+.btn-list {
+    height:40px;
+
+}
+
+.h3-center {
+    text-align: center;
+    /* margin-left: auto;
+    margin-right: auto; */
+    margin-left: auto;
+}
+
+/* ボタンを縦に配置 */
+.btn-height {
+    display:flex;
+    flex-flow: column;
+    align-items: center;
+    /* justify-content: center; */
+
 }

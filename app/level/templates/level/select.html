@@ -6,15 +6,21 @@
         {{ block.super }}
         <div class="level">
             <h4>難易度を選択してください</h4>
-            <button type="button" onclick="location.href='{% url 'level:easy' %}'" class="btn-width mx-auto btn-wrapper">
-                初級
-            </button>
-            <button type="button" onclick="location.href='{% url 'level:nomal' %}'" class="btn-width mx-auto btn-wrapper">
-                中級
-            </button>
-            <button type="button" onclick="location.href='{% url 'level:hard' %}'" class="btn-width mx-auto btn-wrapper">
-                上級
-            </button>
+            <div class="btn-height btn-list">
+                
+
+            </div>
+            <!-- <div class="btn-height btn-list">
+                <button type="button" onclick="location.href='{% url 'level:easy' %}'" class="btn-width mx-auto btn-wrapper">
+                    初級(3×3マス)
+                </button>
+                <button type="button btn-list" onclick="location.href='{% url 'level:nomal' %}'" class="btn-width mx-auto btn-wrapper">
+                    中級(4×4マス)
+                </button>
+                <button type="button btn-list" onclick="location.href='{% url 'level:hard' %}'" class="btn-width mx-auto btn-wrapper">
+                    上級(5×5マス)
+                </button>
+            </div> -->
             <!-- <button type="button" class="btn mx-auto btn-success btn-wrapper">
                 <a href="{% url 'level:easy' %}">
                     初級
