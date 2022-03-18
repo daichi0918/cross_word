@@ -379,9 +379,9 @@ header {
 
 } */
 
-.btn-list {
+/* .btn-list {
     height:40px;
-    /* margin-left: 20px; */
+    margin-left: 20px;
     background-color: rgba(0, 170, 170, 0.2);
     border-radius:6px;
     display:flex;
@@ -389,7 +389,7 @@ header {
     align-items: center;
     justify-content: center;
     width:100%
-}
+} */
 
 .h3-center{
     text-align: center;
@@ -407,6 +407,10 @@ header {
     justify-content: center;
 
 } */
+.flexbox {
+    display: flex;
+    flex-direction: column;
+}
 
 /* 要素を横に配置 */
 .beside {
@@ -420,3 +424,6 @@ header {
     text-decoration: none;
 }
 
+.font-fix {
+    font-size: 30px;
+}

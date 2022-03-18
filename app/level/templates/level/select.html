@@ -5,11 +5,11 @@
     <div class="cross-word">
         {{ block.super }}
         <div class="level">
-            <h3 class="explanation">難易度を選択して下さい</h3>
-            <div class="btn-height btn-list ">
-                <a class="title-a" type="button" href="{% url 'level:easy' %}"><span>初級</span>(3×3マス)</a>
-                <a class="title-a" type="button" href="{% url 'level:normal' %}"><span>中級</span>(4×4マス)</a>
-                <a class="title-a" type="button" href="{% url 'level:hard' %}"><span>上級</span>(5×5マス)</a>
+            <h2>難易度を選択して下さい</h2>
+            <div class="flexbox">
+                <a class="title-a font-fix" type="button" href="{% url 'level:easy' %}"><span>初級</span>(3×3マス)</a>
+                <a class="title-a font-fix" type="button" href="{% url 'level:normal' %}"><span>中級</span>(4×4マス)</a>
+                <a class="title-a font-fix" type="button" href="{% url 'level:hard' %}"><span>上級</span>(5×5マス)</a>
 
                 <!-- <a type="button" href="{% url 'level:easy' %}">
                         初級(3×3マス)
