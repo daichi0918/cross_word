@@ -18,6 +18,7 @@ span {
 
 /* 画面上部のタイトル */
 .title {
+    font-weight: bold;
     text-align: center;
     margin-top: 0;
     padding-top: 100px;
@@ -27,6 +28,19 @@ span {
     text-shadow: 
         0.1em 0.12em 0 black, 
 		0.08em 0.05em 0 rgba(0, 0, 0, 0.6);
+}
+
+
+.title-a {
+    text-decoration: none;
+    color:rgba(40, 250, 250);
+    border-radius: 6px;
+}
+
+.title-a:hover {
+    position:relative;
+    top: 2px;
+    left:2px;
 }
 
 /* 画面上部レベル表示 */
@@ -49,7 +63,7 @@ span {
     font-weight: bold;
     text-align: center;
     color: yellow;
-    margin-right: 10%;
+    margin-right: 15%;
     text-shadow: 
     0.1em 0.12em 0 black, 
     0.08em 0.05em 0 rgba(0, 0, 0);
@@ -65,7 +79,7 @@ span {
     font-weight: bold;
     text-align: center;
     color: gray;
-    margin-right: 10%;
+    margin-right: 15%;
     text-shadow: 
     0.1em 0.12em 0 black, 
     0.08em 0.05em 0 rgba(0, 0, 0);
@@ -138,8 +152,8 @@ button {
     align-content: center;
     justify-content: center;
     float: left;
-    width: 30%;
-    margin-left: 20%;
+    width: 32%;
+    margin-left: 18%;
 }
 
 /* クロスワードのマスに書かれたヒント */
@@ -290,6 +304,7 @@ header {
 
 .p-1 {
     color: rgb(10, 250, 250);
+    text-decoration: none;
     padding-top: 20px;
     padding-left: 30px;
     padding-right: 20px;
@@ -302,6 +317,12 @@ header {
         0.1em 0.12em 0 black, 
 		0.08em 0.05em 0 rgba(0, 0, 0, 0.6);
         
+}
+
+.p-1:hover{
+    position:relative;
+    top: 2px;
+    left:2px;
 }
 
 .p-2 {
@@ -323,5 +344,8 @@ header {
 .header-content:hover {
     color: white;
     font-weight: bold;
+    position:relative;
+    top: 2px;
+    left:2px;
 
 }

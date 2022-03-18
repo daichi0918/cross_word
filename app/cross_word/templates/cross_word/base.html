@@ -11,7 +11,7 @@
         {% block content %}
             <header>
                 <div class="d-flex">
-                    <div class="p-1"><span>IT</span>クロスワード</div>
+                    <a class="p-1" type="button" href="{% url 'level:select' %}"><span>IT</span>クロスワード</a>
                     <div class="p-2">
                         <a class="header-content" href="{% url 'user:login' %}">ログアウト</a>
                     </div>
@@ -20,7 +20,9 @@
                     </div>  
                 </div>
             </header>
-            <h1 class="title"><span>IT</span> クロスワード</h1>
+            <div class="title" >
+                <a class="title-a" type="button" href="{% url 'level:select' %}"><span>IT</span> クロスワード<a/>
+            </div>
         {% endblock %}
     </body>
 </html>
