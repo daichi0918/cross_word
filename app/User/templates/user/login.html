@@ -3,13 +3,13 @@
 <html lang="ja">
    <head>
       <meta charset="utf-8">
-      <link rel="stylesheet" href="{% static 'user/style.css' %}">
+      <link rel="stylesheet" href="{% static 'css/user/style.css' %}">
    </head>
    <body>
 
 {% block content %}
   <form method="POST">  
-    <h1>IT クロスワード</h1>
+    <h1><span>IT</span> クロスワード</h1>
     {% csrf_token %}
     {{ form.as_p }}
     <input type="hidden" name="next" value="{{ request.GET.next }}">
