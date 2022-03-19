@@ -15,7 +15,7 @@ window.onload = function() {
     document.getElementById("three-s").textContent="　";
 
     document.getElementById("four").textContent="　";
-    document.getElementById("four-s").textContent="　";
+    document.getElementById("four-s").textContent="3";
 
     document.getElementById("five").textContent="C";
     document.getElementById("five-s").textContent="　";
