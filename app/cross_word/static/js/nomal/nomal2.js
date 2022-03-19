@@ -13,7 +13,7 @@ window.onload = function() {
     document.getElementById("two-s").textContent="　";
 
     document.getElementById("three").textContent="　";
-    document.getElementById("three-s").textContent="(1)";
+    document.getElementById("three-s").textContent="1";
 
     document.getElementById("four").textContent="　";
     document.getElementById("four-s").textContent="　";
@@ -31,10 +31,10 @@ window.onload = function() {
     document.getElementById("eight-s").textContent="　";
 
     document.getElementById("nine").textContent="　";
-    document.getElementById("nine-s").textContent="(3)";
+    document.getElementById("nine-s").textContent="3";
 
     document.getElementById("ten").textContent="　";
-    document.getElementById("ten-s").textContent="(2)";
+    document.getElementById("ten-s").textContent="2";
     
     document.getElementById("eleven").textContent="　";
     document.getElementById("eleven-s").textContent="　";

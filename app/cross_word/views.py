@@ -9,8 +9,7 @@ l = ['----- 正解です！ -----',
         '----- おめでとう！ -----',
         '----- very good!!! -----', 
         '----- more play!!! -----', 
-        '----- おはようございます-----',
-        'Created by E-TEAM'
+        '----- Created by E-TEAM -----',
         ]
 
 n = ['----- ざんねん！ -----',
@@ -18,7 +17,7 @@ n = ['----- ざんねん！ -----',
         '----- one more play!!! -----', 
         '----- 再チャレンジ!!! -----', 
         '----- I have a dream today! -----',
-        'Created by E-TEAM'
+        '----- Created by E-TEAM -----',
         ]
 
 # OSS
@@ -162,7 +161,7 @@ def nomal_answer2(request):
     return render(request, 'cross_word/nomal_answer2.html', params)
 
 
-# こあら'こあら', 'コアラ', '子守熊', '袋熊']
+# こあら
 def hard(request):
     params = {
         'something':[],
@@ -213,7 +212,7 @@ def hard2(request):
         objects = Cross_wordSomething.objects.filter(crossword_id=6)
         for object in objects:
             answer = object.crossword_ans
-            word = request.POST['word']
+            word = request.POST['word'].upper()
             if word in answer:
                 return redirect('cross_word:hard_answer2')
             else:
