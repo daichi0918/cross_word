@@ -13,10 +13,14 @@
   <div class="level">
     {{ block.super }}
     <h2>初級問題一覧</h2>
+    <div class="question-group">
       問題１
         <a class="title-a font-fix" type="button" href="{% url 'cross_word:easy' %}"><span>挑戦する！</span></a><br>
+    </div>
+    <div class="question-group">
       問題２
       <a class="title-a font-fix" type="button" href="{% url 'cross_word:easy2' %}"><span>挑戦する！</span></a>
+    </div>
   </div>
 </div>
 
