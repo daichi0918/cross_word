@@ -30,19 +30,12 @@ span {
 		0.08em 0.05em 0 rgba(0, 0, 0, 0.6);
 }
 
-
 .title-a {
     text-decoration: none;
     color:rgba(40, 250, 250);
     border-radius: 6px;
     
 }
-
-/* .title-a:hover {
-    position:relative;
-    top: 2px;
-    left:2px;
-} */
 
 /* 画面上部レベル表示 */
 .level {
