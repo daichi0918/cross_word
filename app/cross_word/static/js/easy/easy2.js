@@ -8,23 +8,23 @@ window.onload = function() {
     document.getElementById("one").textContent="A";
     document.getElementById("one-s").textContent="　";
 
-    document.getElementById("two").textContent="";
+    document.getElementById("two").textContent="　";
     document.getElementById("two-s").textContent="　";
 
     document.getElementById("three").textContent="B";
     document.getElementById("three-s").textContent="　";
 
     document.getElementById("four").textContent="　";
-    document.getElementById("four-s").textContent="(1)";
+    document.getElementById("four-s").textContent="1";
 
     document.getElementById("five").textContent="　";
     document.getElementById("five-s").textContent="　";
 
     document.getElementById("six").textContent="　";
-    document.getElementById("six-s").textContent="(3)";
+    document.getElementById("six-s").textContent="3";
 
     document.getElementById("seven").textContent="　";
-    document.getElementById("seven-s").textContent="(2)";
+    document.getElementById("seven-s").textContent="2";
 
     document.getElementById("eight").textContent="　";
     document.getElementById("eight-s").textContent="　";

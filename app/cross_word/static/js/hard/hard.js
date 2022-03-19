@@ -45,7 +45,7 @@ window.onload = function() {
     document.getElementById("thirteen-s").textContent="　";
     
     document.getElementById("fourteen").textContent="E";
-    document.getElementById("fourteen-s").textContent="(1)";
+    document.getElementById("fourteen-s").textContent="1";
     
     document.getElementById("fifteen").textContent="　";
     document.getElementById("fifteen-s").textContent="　";
@@ -78,7 +78,7 @@ window.onload = function() {
     document.getElementById("twenty-four-s").textContent="　";
     
     document.getElementById("twenty-five").textContent="　";
-    document.getElementById("twenty-five-s").textContent="(2)";
+    document.getElementById("twenty-five-s").textContent="2";
 
 
 
