@@ -37,6 +37,13 @@ span {
     
 }
 
+.title-a:hover {
+    position:relative;
+    top: 2px;
+    left:2px;
+    
+}
+
 /* 画面上部レベル表示 */
 .level {
     text-align: center;
@@ -160,5 +167,7 @@ header {
 /* 問題一覧ページ微調整用CSS */
 .question-group {
     margin-top: 40px;
+    font-size: 28px;
+    color: yellow;
     /* margin-bottom: 20px; */
 }
