@@ -80,13 +80,13 @@
             </div>
         </div>
         <div class="ans-form">
-            {% comment %} {% for some in something %} {% endcomment %}
+            {% for some in something %}
             <h2 class="ans">答え : {{ some.crossword_ans }}</h2>
             <div>
             <p class="explanation">{{ some.crossword_ans_comment }}</p>
             </div>
             <a class= "ans-button" href="{% url 'cross_word:easy2' %}">戻る</a>
-            {% comment %} {% endfor %} {% endcomment %}
+            {% endfor %}
         </div>
     </div>
 </div>

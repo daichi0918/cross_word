@@ -6,7 +6,7 @@ window.onload = function() {
     document.getElementById("level").textContent="上級　その弐";
 
     document.getElementById("one").textContent="A";
-    document.getElementById("one-s").textContent="(7)";
+    document.getElementById("one-s").textContent="7";
 
     document.getElementById("two").textContent="B";
     document.getElementById("two-s").textContent="　";
@@ -18,13 +18,13 @@ window.onload = function() {
     document.getElementById("four-s").textContent="　";
 
     document.getElementById("five").textContent="C";
-    document.getElementById("five-s").textContent="(3)";
+    document.getElementById("five-s").textContent="3";
 
     document.getElementById("six").textContent="　";
     document.getElementById("six-s").textContent="　";
 
     document.getElementById("seven").textContent="　";
-    document.getElementById("seven-s").textContent="(1)";
+    document.getElementById("seven-s").textContent="1";
 
     document.getElementById("eight").textContent="　";
     document.getElementById("eight-s").textContent="　";
@@ -51,7 +51,7 @@ window.onload = function() {
     document.getElementById("fifteen-s").textContent="　";
     
     document.getElementById("sixteen").textContent="　";
-    document.getElementById("sixteen-s").textContent="(4)";
+    document.getElementById("sixteen-s").textContent="4";
     
     document.getElementById("seventeen").textContent="　";
     document.getElementById("seventeen-s").textContent="　";
@@ -69,13 +69,13 @@ window.onload = function() {
     document.getElementById("twenty-one-s").textContent="　";
     
     document.getElementById("twenty-two").textContent="　";
-    document.getElementById("twenty-two-s").textContent="(6)";
+    document.getElementById("twenty-two-s").textContent="6";
     
     document.getElementById("twenty-three").textContent="　";
     document.getElementById("twenty-three-s").textContent="　";
     
     document.getElementById("twenty-four").textContent="J";
-    document.getElementById("twenty-four-s").textContent="(2:5)";
+    document.getElementById("twenty-four-s").textContent="2,5";
     
     document.getElementById("twenty-five").textContent="　";
     document.getElementById("twenty-five-s").textContent="　";

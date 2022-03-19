@@ -6,10 +6,10 @@ window.onload = function() {
     document.getElementById("level").textContent="初級　その壱";
 
     document.getElementById("one").textContent="A";
-    document.getElementById("one-s").textContent="(1)";
+    document.getElementById("one-s").textContent="1";
 
     document.getElementById("two").textContent="B";
-    document.getElementById("two-s").textContent="(2)";
+    document.getElementById("two-s").textContent="2";
 
     document.getElementById("three").textContent="　";
     document.getElementById("three-s").textContent="　";
@@ -27,7 +27,7 @@ window.onload = function() {
     document.getElementById("seven-s").textContent="　";
 
     document.getElementById("eight").textContent="　";
-    document.getElementById("eight-s").textContent="(3)";
+    document.getElementById("eight-s").textContent="3";
 
     document.getElementById("nine").textContent="　";
     document.getElementById("nine-s").textContent="　";

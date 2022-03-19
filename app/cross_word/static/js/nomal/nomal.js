@@ -30,7 +30,7 @@ window.onload = function() {
     document.getElementById("eight-s").textContent="　";
 
     document.getElementById("nine").textContent="C";
-    document.getElementById("nine-s").textContent="　";
+    document.getElementById("nine-s").textContent="1";
 
     document.getElementById("ten").textContent="　";
     document.getElementById("ten-s").textContent="　";
@@ -45,7 +45,7 @@ window.onload = function() {
     document.getElementById("thirteen-s").textContent="　";
     
     document.getElementById("fourteen").textContent="　";
-    document.getElementById("fourteen-s").textContent="1";
+    document.getElementById("fourteen-s").textContent="　";
     
     document.getElementById("fifteen").textContent="　";
     document.getElementById("fifteen-s").textContent="　";
