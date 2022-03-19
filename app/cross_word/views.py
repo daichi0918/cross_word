@@ -91,7 +91,7 @@ def easy_answer2(request):
     return render(request, 'cross_word/easy_answer2.html', params)
 
 # データ
-def nomal(request):
+def normal(request):
     params = {
         'something':[],
         'vertical':[],
@@ -107,12 +107,12 @@ def nomal(request):
             answer = object.crossword_ans
             word = request.POST['word']
             if word in answer:
-                return redirect('cross_word:nomal_answer')
+                return redirect('cross_word:normal_answer')
             else:
                 params['mistake']=random.choice(n)
-    return render(request, 'cross_word/nomal.html', params)
+    return render(request, 'cross_word/normal.html', params)
 
-def nomal_answer(request):
+def normal_answer(request):
     params = {
         'something':[],
         'vertical':[],
@@ -123,10 +123,10 @@ def nomal_answer(request):
     params['vertical']=VerticalHint.objects.filter(crossword_id=2)
     params['horizonal']=HorizonalHint.objects.filter(crossword_id=2)
     params['explanation']=random.choice(l)
-    return render(request, 'cross_word/nomal_answer.html', params)
+    return render(request, 'cross_word/normal_answer.html', params)
 
 # APT
-def nomal2(request):
+def normal2(request):
     params = {
         'something':[],
         'vertical':[],
@@ -142,12 +142,12 @@ def nomal2(request):
             answer = object.crossword_ans
             word = request.POST['word'].upper()
             if word in answer:
-                return redirect('cross_word:nomal_answer2')
+                return redirect('cross_word:normal_answer2')
             else:
                 params['mistake']=random.choice(n)
-    return render(request, 'cross_word/nomal2.html', params)
+    return render(request, 'cross_word/normal2.html', params)
 
-def nomal_answer2(request):
+def normal_answer2(request):
     params = {
         'something':[],
         'vertical':[],
@@ -158,7 +158,7 @@ def nomal_answer2(request):
     params['vertical']=VerticalHint.objects.filter(crossword_id=5)
     params['horizonal']=HorizonalHint.objects.filter(crossword_id=5)
     params['explanation']=random.choice(l)
-    return render(request, 'cross_word/nomal_answer2.html', params)
+    return render(request, 'cross_word/normal_answer2.html', params)
 
 
 # こあら
