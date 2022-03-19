@@ -5,23 +5,44 @@
     <div class="cross-word">
         {{ block.super }}
         <div class="level">
-            <h4>難易度を選択してください</h4>
-            <button type="button" onclick="location.href='{% url 'level:easy' %}'" class="btn-width mx-auto btn-wrapper">
-                初級
-            </button>
-            <button type="button" onclick="location.href='{% url 'level:nomal' %}'" class="btn-width mx-auto btn-wrapper">
-                中級
-            </button>
-            <button type="button" onclick="location.href='{% url 'level:hard' %}'" class="btn-width mx-auto btn-wrapper">
-                上級
-            </button>
+            <h2>難易度を選択して下さい</h2>
+            <div class="flexbox">
+                <a class="title-a font-fix" type="button" href="{% url 'level:easy' %}"><span>初級</span>(3×3マス)</a>
+                <a class="title-a font-fix" type="button" href="{% url 'level:normal' %}"><span>中級</span>(4×4マス)</a>
+                <a class="title-a font-fix" type="button" href="{% url 'level:hard' %}"><span>上級</span>(5×5マス)</a>
+
+                <!-- <a type="button" href="{% url 'level:easy' %}">
+                        初級(3×3マス)
+                </a> -->
+                <!-- <a href="{% url 'level:normal' %}">
+                    <button>
+                        中級(4×4マス)
+                    </button>
+                </a>
+                <a href="{% url 'level:hard' %}">
+                    <button>
+                        上級(5×5マス)
+                    </button>
+                </a>
+            </div> -->
+            <!-- <div class="btn-height btn-list">
+                <button type="button" onclick="location.href='{% url 'level:easy' %}'" class="btn-width mx-auto btn-wrapper">
+                    初級(3×3マス)
+                </button>
+                <button type="button btn-list" onclick="location.href='{% url 'level:normal' %}'" class="btn-width mx-auto btn-wrapper">
+                    中級(4×4マス)
+                </button>
+                <button type="button btn-list" onclick="location.href='{% url 'level:hard' %}'" class="btn-width mx-auto btn-wrapper">
+                    上級(5×5マス)
+                </button>
+            </div> -->
             <!-- <button type="button" class="btn mx-auto btn-success btn-wrapper">
                 <a href="{% url 'level:easy' %}">
                     初級
                 </a>
             </button>
             <button type="button" class="btn mx-auto btn-success btn-wrapper">
-                <a href="{% url 'level:nomal' %}">
+                <a href="{% url 'level:normal' %}">
                     中級
                 </a>
             </button>

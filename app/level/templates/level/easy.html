@@ -9,33 +9,17 @@
       問題1
     </button> 
   </a> -->
+  <!-- データーベースを利用予定変更。直接指定 -->
+  <div class="level">
+    {{ block.super }}
+    <h2>初級問題一覧</h2>
+      問題１
+        <a class="title-a font-fix" type="button" href="{% url 'cross_word:easy' %}"><span>挑戦する！</span></a><br>
+      問題２
+      <a class="title-a font-fix" type="button" href="{% url 'cross_word:easy2' %}"><span>挑戦する！</span></a>
+  </div>
+</div>
 
-  <!-- データーベースから取り出したい！ -->
-  <div>
-      {{ block.super }}
-    <table class="center" style="border-collapse: collapse">
-      <tr>
-        <th>
-          <h3>
-            初級問題一覧
-          </h3>
-        </th>
-      </tr>
-      <tr>
-        <td>
-          <p class="question">問題１</p>
-        </td>
-        <td>
-           <!-- <button onclick="location.href='http://localhost:8004/cross_word/'" class="btn-width mx-auto btn-wrapper">問題:{{item.age}}</button> -->
-          <div class="button mx-auto btn-wrapper">
-            <a href="{% url 'cross_word:easy' %}">
-              <button>
-                挑戦する！
-              </button>
-            </a>
-          </div>
-        </td>
-      </tr>
       <!-- {% for item in friend %}
       <tr class="center">
         <td>
@@ -47,7 +31,5 @@
         </td>
       </tr>
       {% endfor %} -->
-    </table>
-  </div>
-</div>
+
 {% endblock content %}
