@@ -30,19 +30,12 @@ span {
 		0.08em 0.05em 0 rgba(0, 0, 0, 0.6);
 }
 
-
 .title-a {
     text-decoration: none;
     color:rgba(40, 250, 250);
     border-radius: 6px;
     
 }
-
-/* .title-a:hover {
-    position:relative;
-    top: 2px;
-    left:2px;
-} */
 
 /* 画面上部レベル表示 */
 .level {
@@ -54,39 +47,6 @@ span {
     0.08em 0.05em 0 rgba(0, 0, 0);
 }
 
-/* 画面下部ヒント表示 */
-
-/* .hint-title {
-    float:right;
-    width:35%;
-    list-style: none;
-    padding-bottom: 15px;
-    font-weight: bold;
-    text-align: center;
-    color: yellow;
-    margin-right: 15%;
-    text-shadow: 
-    0.1em 0.12em 0 black, 
-    0.08em 0.05em 0 rgba(0, 0, 0);
-    
-} */
-
-/* .hint {
-    float:right;
-    width: 35%;
-    overflow-wrap: normal;
-    list-style: none;
-    padding-bottom: 15px;
-    font-weight: bold;
-    text-align: center;
-    color: gray;
-    margin-right: 15%;
-    text-shadow: 
-    0.1em 0.12em 0 black, 
-    0.08em 0.05em 0 rgba(0, 0, 0);   
-} */
-
-
 /* 説明 */
 .explanation {
     text-align: center;
@@ -97,32 +57,6 @@ span {
     0.1em 0.12em 0 black, 
     0.08em 0.05em 0 rgba(0, 0, 0, 0.6);
 }
-
-/* 画面下部答え入力画面 */
-/* .ans-form {
-    margin:  70px auto auto auto;
-    display: block;
-    width: 330px;
-    padding-bottom: 50px;
-    clear: both;
-} */
-
-/* 答え入力フォーム */
-/* .ans-box {
-    margin: auto;
-    font-size: 150%;
-    width: 70%;
-    background-color: rgba(0, 170, 170, 0.2);
-    border-radius: 12px;
-} */
-
-/* 回答正解時の答え */
-/* .ans {
-    color: yellow;
-    text-shadow: 
-    0.1em 0.12em 0 black,  
-    0.08em 0.05em 0 rgba(0, 0, 0, 0.6);
-} */
 
 /* 決定ボタン */
 button {
@@ -139,151 +73,6 @@ button {
     border-radius: 12px;
     margin-top: 0;
 }
-
-/* .content-horizonal{
-    display: inline-block;
-    float: left;
-/* } */ 
-
-/* クロスワードのボード、サイズ、範囲 */
-/* .container {
-    display: grid;
-    grid-template-columns: repeat(var(--items), min(calc(49vh/var(--items)), calc(49vw/var(--items))));
-    grid-template-rows: repeat(var(--items), min(calc(49vh/var(--items)), calc(49vw/var(--items))));
-    align-content: center;
-    justify-content: center;
-    float: left;
-    width: 32%;
-    margin-left: 18%;
-} */
-
-/* クロスワードのマスに書かれたヒント */
-/* .hint-header {
-    margin-right: 3px;
-    margin-left: 3px;
-    font-size: 16px;
-    color: rgb(70, 70, 70);
-    display: inline;
-} */
-
-/* .hint-header-s {
-    margin-right: 3px;
-    margin-left: 3px;
-    font-size: 12px;
-    color: rgb(70, 70, 70);
-    display: inline;
-    float: right;
-} */
-
-/* 何も書き込まないブロック */
-/* .item-none {
-    width: 100%;
-    height: 100%;
-    box-sizing: border-box;
-    display: block;
-    background-color: black;
-    border: 1px solid rgba(0, 0, 0, 0.6);
-
-} */
-/* rgb(130, 130, 130, 0.7) */
-
-/* grayブロック */
-/* .item-gray {
-    background-color: rgb(230, 230, 230);
-    border: 1px solid rgba(0, 0, 0, 0.6);
-} */
-
-/* whiteブロック */
-/* .item-white {
-    background-color: rgb(240, 240, 240);
-    border: 1px solid rgba(0, 0, 0, 0.6);
-    
-} */
-
-/* inputスペース */
-/* .input-easy {
-    background-color: rgb(240, 240, 240, 0);
-    border: rgb(240, 240, 240);
-    font-size: 300%;
-    max-width: 40%;
-    margin-left: 30%;
-    color: rgb(70, 70, 70);
-} */
-
-/* .input-nomal {
-    background-color: rgb(240, 240, 240, 0);
-    border: rgb(240, 240, 240);
-    font-size: 200%;
-    max-width: 40%;
-    margin-left: 30%;
-    color: rgb(70, 70, 70);
-} */
-
-/* .input-hard {
-    background-color: rgb(240, 240, 240, 0);
-    border: rgb(240, 240, 240);
-    font-size: 150%;
-    max-width: 40%;
-    margin-left: 30%;
-    color: rgb(70, 70, 70);
-} */
-
-
-/* .clearfix:after {
-    content: "";         擬似要素を実体化
-    clear: both;        floatを解除する
-    display: block;     ブロック要素にする
-} */
-
-/* クリック時のアウトライン設定 */
-/* :focus {
-    outline: none;
-} */
-
-/* Pタグ */
-/* p {
-    margin: 0%;
-} */
-
-/* 戻るボタン */
-/* .ans-button {
-    font-size: 100%;
-    padding: 0 5px;
-    color: black;
-    font-weight: bold;
-    text-decoration: none;
-    cursor: pointer;
-    border-radius: 4px;
-    border: 1px solid black;
-    font-weight: bold;
-    background-color: rgba(0, 170, 170,0.2);
-
-} */
-
-/* カーソルを合わせたときに表示を変える */
-/* .ans-button:hover{
-    background-color: rgba(0, 170, 170,0.3);
-
-} */
-
-/* 答えのフォーム */
-/* .clearfix.wrapper {
-    display: flex;
-    flex-direction: row;
-    flex-wrap: wrap;
-    justify-content: center; 
-    float: right;
-    width: 50%;
-    margin-right: 10%;
-} */
-
-/* .box {
-    background-color: rgba(0, 0, 0, 0.6);
-    color: white;
-    width: 200px;
-    margin: 5px;
-    padding: 12px;
-} */
 
 /* ヘッダー部分の作成 */
 header {
@@ -352,78 +141,24 @@ header {
     left:2px;
 
 }
-/* levelアプリ用CSS */
-/* 要素を真ん中に */
-.center {
-    display: flex;
-    justify-content: center;
-}
-
-/* table {
-    display: block;
-    width: 70px;
-    align-items: center;
-    margin:0 auto;
-    margin-left: auto;
-    margin-right: auto;
-} */
-
-/* 問題のところの微調整 */
-/* .question {
-    margin-right: 50px;
-    float:left;
-    display: flex;
-    width: 100px;
-    margin:auto;
-    list-style: none;
-
-} */
-
-/* .btn-list {
-    height:40px;
-    margin-left: 20px;
-    background-color: rgba(0, 170, 170, 0.2);
-    border-radius:6px;
-    display:flex;
-    flex-flow: column;
-    align-items: center;
-    justify-content: center;
-    width:100%
-} */
-
-.h3-center{
-    text-align: center;
-    /* margin-left: auto;
-    margin-right: auto; */
-    margin-left: auto;
-}
+/* 以降levelアプリ用CSS */
 
 /* ボタンを縦に配置 */
-/* .btn-height {
-    display:flex;
-    flex-flow: column;
-    align-items: center;
-    width:100%;
-    justify-content: center;
-
-} */
 .flexbox {
     display: flex;
     flex-direction: column;
 }
 
 /* 要素を横に配置 */
-.beside {
-    float: left;
-    text-align: center;
-    width:30%;
-    margin: auto;
-    } 
-
-.btn {
-    text-decoration: none;
-}
-
 .font-fix {
     font-size: 30px;
+    margin-top:20px;
+    margin-bottom: 20px;
+    margin-left: 40px;
+}
+
+/* 問題一覧ページ微調整用CSS */
+.question-group {
+    margin-top: 40px;
+    /* margin-bottom: 20px; */
 }
