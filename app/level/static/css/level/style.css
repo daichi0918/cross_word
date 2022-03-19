@@ -161,10 +161,11 @@ header {
     font-size: 30px;
     margin-top:20px;
     margin-bottom: 20px;
+    margin-left: 40px;
 }
 
 /* 問題一覧ページ微調整用CSS */
 .question-group {
-    margin-top: 20px;
-    margin-bottom: 20px;
+    margin-top: 40px;
+    /* margin-bottom: 20px; */
 }
